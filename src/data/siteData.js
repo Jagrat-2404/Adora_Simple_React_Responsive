@@ -1,0 +1,40 @@
+export const navigation = [
+  { label: 'Services', path: '/services' },
+  { label: 'Why Adora', path: '/about' },
+  { label: 'How we work', path: '/process' },
+]
+
+export const services = [
+  { number: '01', name: 'Social media', icon: '✳', title: 'Make your brand part of the conversation.', description: 'Content, strategy and a visual presence that gives people a reason to stop, follow and remember you.', points: ['Monthly content direction', 'Designs & short-form video', 'Clear reporting'] },
+  { number: '02', name: 'Meta Ads', icon: '◉', title: 'Turn attention into measurable action.', description: 'Smart campaigns with thoughtful creative, useful audiences and a practical focus on leads and sales.', points: ['Campaign strategy', 'Creative testing', 'Weekly optimisation'] },
+  { number: '03', name: 'Web design', icon: '⌘', title: 'A website that feels like your best first impression.', description: 'Fast, considered websites that make your offer simple to understand and easy to act on.', points: ['UX & visual design', 'Responsive development', 'Launch support'] },
+  { number: '04', name: 'Custom apps', icon: '↗', title: 'Useful digital tools, built around your business.', description: 'From focused internal workflows to customer-facing products, we build the practical thing you need.', points: ['Product discovery', 'Custom development', 'Ongoing support'] },
+]
+
+export const processSteps = [
+  { number: '01', title: 'Start with a real conversation', description: 'Tell us what is changing, what is stuck, and where you want to go.' },
+  { number: '02', title: 'Find the clearest next step', description: 'We shape a focused plan with the work, timing and expectations out in the open.' },
+  { number: '03', title: 'Make it happen together', description: 'We work in the open, share progress often and keep useful things moving.' },
+]
+
+export const values = [
+  { number: '01', title: 'Clarity', description: 'Good work starts when everyone understands what matters.' },
+  { number: '02', title: 'Care', description: 'We sweat the details, because the details are where trust lives.' },
+  { number: '03', title: 'Momentum', description: 'We prefer practical progress over perfect plans that never leave the page.' },
+]
+
+export const stats = [
+  { value: 50, suffix: '+', label: 'brands partnered with' },
+  { value: 120, suffix: '+', label: 'projects brought to life' },
+  { value: 8, suffix: 'M+', label: 'people reached' },
+  { value: 96, suffix: '%', label: 'repeat client partnerships' },
+]
+
+export const projects = [
+  { title: 'E-Commerce Platform', category: 'Web Development', description: 'Full-stack e-commerce solution with payment integration', icon: '🛒' },
+  { title: 'Mobile Banking App', category: 'Mobile Development', description: 'Secure mobile banking application for iOS and Android', icon: '📱' },
+  { title: 'Design System', category: 'UI/UX Design', description: 'Comprehensive design system for enterprise applications', icon: '🎨' },
+  { title: 'Analytics Dashboard', category: 'Web Development', description: 'Real-time analytics and reporting platform', icon: '📊' },
+  { title: 'Social Network', category: 'Full Stack', description: 'Social media platform with real-time features', icon: '💬' },
+  { title: 'AI Chatbot', category: 'Backend Development', description: 'Intelligent chatbot with natural language processing', icon: '🤖' },
+]

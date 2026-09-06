@@ -1,0 +1,3 @@
+import { useState } from 'react'
+function ContactForm() { const [sent, setSent] = useState(false); const submit = e => { e.preventDefault(); setSent(true); e.currentTarget.reset() }; return <form className="contact-form" onSubmit={submit}>{sent && <p className="success">Thank you — we’ll be in touch soon.</p>}<label>Your name<input required placeholder="What should we call you?" /></label><label>Email address<input required type="email" placeholder="you@example.com" /></label><label>What’s on your mind?<textarea required rows="4" placeholder="A new website, more leads, a better way to show up…" /></label><button className="button button-peach form-button" type="submit">Send your note <span>↗</span></button></form> }
+export default ContactForm
