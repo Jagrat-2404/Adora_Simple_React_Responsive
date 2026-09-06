@@ -1,4 +1,5 @@
 export const navigation = [
+  { label: 'Home', path: '/' },
   { label: 'Services', path: '/services' },
   { label: 'Why Adora', path: '/about' },
   { label: 'How we work', path: '/process' },
