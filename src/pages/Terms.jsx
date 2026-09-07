@@ -1,3 +1,4 @@
+import { Parallax } from 'react-scroll-parallax'
 import Container from '../components/Container'
 import PageHero from '../components/PageHero'
 
@@ -23,8 +24,40 @@ const terms = [
 ]
 
 function Terms() {
-  return <><PageHero label="Our terms" title="Terms and" italicTitle="conditions." description="Clear terms that guide our work together." />
-    <section className="section terms"><Container><p className="terms-intro">Thank you for choosing Adora Solution. We aim to provide clear, straightforward, and effective services. These terms explain how we work together.</p><div className="terms-list">{terms.map(([title, text], index) => <article key={title}><span>{String(index + 1).padStart(2, '0')}</span><div><h2>{title}</h2><p>{text}</p></div></article>)}</div></Container></section>
-  </>
+  return (
+    <>
+      <PageHero
+        label="Our terms"
+        title="Terms and"
+        italicTitle="conditions."
+        description="Clear, transparent terms that guide our professional partnership."
+        badge1="✦ Transparent Terms"
+        badge2="● Client First"
+      />
+
+      <section className="section terms numa-terms-section">
+        <Container>
+          <Parallax speed={-2}>
+            <p className="terms-intro">
+              Thank you for choosing Adora Solution. We aim to provide clear, straightforward, and effective services. These terms explain how we work together.
+            </p>
+          </Parallax>
+
+          <div className="terms-list numa-terms-list">
+            {terms.map(([title, text], index) => (
+              <article key={title} className="numa-term-item">
+                <span>{String(index + 1).padStart(2, '0')}</span>
+                <div>
+                  <h2>{title}</h2>
+                  <p>{text}</p>
+                </div>
+              </article>
+            ))}
+          </div>
+        </Container>
+      </section>
+    </>
+  )
 }
+
 export default Terms

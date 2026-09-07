@@ -1,4 +1,5 @@
 import { Parallax } from 'react-scroll-parallax'
+import AnimatedCounter from './AnimatedCounter'
 
 function HeroDashboard() {
   return (
@@ -38,12 +39,16 @@ function HeroDashboard() {
           <div className="dashboard-stat-row">
             <div className="stat-box">
               <small>Social Visibility</small>
-              <strong>+84.6%</strong>
+              <strong>
+                <AnimatedCounter value="+84.6%" duration={1600} />
+              </strong>
               <em>Creative content that connects</em>
             </div>
             <div className="stat-box">
               <small>Meta Ads Conversion</small>
-              <strong>3.8x ROAS</strong>
+              <strong>
+                <AnimatedCounter value="3.8x" duration={1600} suffix=" ROAS" />
+              </strong>
               <em>Targeted for verified leads</em>
             </div>
           </div>
@@ -105,7 +110,9 @@ function HeroDashboard() {
       <Parallax speed={14} className="floating-pill-badge pill-top-right">
         <span className="pill-icon">⚡</span>
         <div className="pill-text">
-          <strong>72h Launch Speed</strong>
+          <strong>
+            <AnimatedCounter value="72" duration={1400} suffix="h" /> Launch Speed
+          </strong>
           <small>Fast go-to-market</small>
         </div>
       </Parallax>
@@ -113,7 +120,9 @@ function HeroDashboard() {
       <Parallax speed={-7} className="floating-pill-badge pill-bottom-left">
         <span className="pill-icon">📈</span>
         <div className="pill-text">
-          <strong>3.8x Avg Return</strong>
+          <strong>
+            <AnimatedCounter value="3.8" duration={1500} suffix="x" /> Avg Return
+          </strong>
           <small>Consistent scaling</small>
         </div>
       </Parallax>
@@ -121,7 +130,9 @@ function HeroDashboard() {
       <Parallax speed={18} className="floating-pill-badge pill-bottom-right">
         <span className="pill-icon">✓</span>
         <div className="pill-text">
-          <strong>100% Tailored</strong>
+          <strong>
+            <AnimatedCounter value="100" duration={1500} suffix="%" /> Tailored
+          </strong>
           <small>No cookie-cutter templates</small>
         </div>
       </Parallax>

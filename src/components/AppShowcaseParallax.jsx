@@ -1,6 +1,7 @@
 import { Parallax } from 'react-scroll-parallax'
 import Container from './Container'
 import SectionLabel from './SectionLabel'
+import AnimatedCounter from './AnimatedCounter'
 
 function AppShowcaseParallax() {
   return (
@@ -39,7 +40,9 @@ function AppShowcaseParallax() {
                   <strong>Weekly Performance</strong>
                   <time>Today, 9:00</time>
                 </div>
-                <p>+184% local reach • 4.1x Meta Ads ROAS</p>
+                <p>
+                  <AnimatedCounter value="+184%" duration={1600} /> local reach • <AnimatedCounter value="4.1x" duration={1600} /> Meta Ads ROAS
+                </p>
                 <span className="notif-tag">Campaign Exceeding Target</span>
               </div>
             </div>
@@ -72,10 +75,15 @@ function AppShowcaseParallax() {
                 {/* Stat Cards inside Phone */}
                 <div className="phone-metrics-card">
                   <div className="phone-stat-header">
-                    <span>This Month's Return</span>
-                    <span className="phone-trend">+28.4%</span>
+                    <span>This Month&apos;s Return</span>
+                    <span className="phone-trend">
+                      <AnimatedCounter value="+28.4%" duration={1600} />
+                    </span>
                   </div>
-                  <div className="phone-big-num">3.9x <small>ROAS</small></div>
+                  <div className="phone-big-num">
+                    <AnimatedCounter value="3.9" duration={1600} suffix="x " />
+                    <small>ROAS</small>
+                  </div>
                   <div className="phone-mini-bar">
                     <div className="phone-mini-progress" style={{ width: '82%' }} />
                   </div>
@@ -87,18 +95,26 @@ function AppShowcaseParallax() {
                     <div className="phone-channel-icon ig-icon">📸</div>
                     <div className="phone-channel-info">
                       <strong>Instagram Growth</strong>
-                      <small>18.4K Impressions</small>
+                      <small>
+                        <AnimatedCounter value="18.4" duration={1500} suffix="K" /> Impressions
+                      </small>
                     </div>
-                    <span className="phone-channel-val">+42%</span>
+                    <span className="phone-channel-val">
+                      <AnimatedCounter value="+42%" duration={1500} />
+                    </span>
                   </div>
 
                   <div className="phone-channel-item">
                     <div className="phone-channel-icon meta-icon">🎯</div>
                     <div className="phone-channel-info">
                       <strong>Meta Lead Ads</strong>
-                      <small>38 Qualified Enquiries</small>
+                      <small>
+                        <AnimatedCounter value="38" duration={1500} /> Qualified Enquiries
+                      </small>
                     </div>
-                    <span className="phone-channel-val">$14.20/lead</span>
+                    <span className="phone-channel-val">
+                      <AnimatedCounter value="14.20" duration={1500} prefix="$" suffix="/lead" />
+                    </span>
                   </div>
 
                   <div className="phone-channel-item">

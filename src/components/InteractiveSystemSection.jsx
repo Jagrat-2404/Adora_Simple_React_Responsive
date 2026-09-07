@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from 'react'
 import { Parallax } from 'react-scroll-parallax'
 import Container from './Container'
 import SectionLabel from './SectionLabel'
+import AnimatedCounter from './AnimatedCounter'
 
 const modes = [
   {
@@ -48,19 +49,27 @@ const modes = [
 function InteractiveSystemSection() {
   const [activeTab, setActiveTab] = useState(0)
   const containerRef = useRef(null)
+  const isManualClick = useRef(false)
+  const manualTimeout = useRef(null)
 
   useEffect(() => {
     const handleScroll = () => {
+      // Don't override if user just clicked a tab manually
+      if (isManualClick.current) return
       if (!containerRef.current) return
-      const rect = containerRef.current.getBoundingClientRect()
-      const totalHeight = rect.height - window.innerHeight
-      if (totalHeight <= 0) return
 
-      // Progress from 0 to 1 through the section
-      const progress = Math.min(1, Math.max(0, -rect.top / totalHeight))
-      if (progress < 0.33) {
+      const rect = containerRef.current.getBoundingClientRect()
+      const scrollableDistance = rect.height - window.innerHeight
+      if (scrollableDistance <= 0) return
+
+      // Progress from 0 (when top hits top) to 1 (when bottom hits bottom)
+      const rawProgress = -rect.top / scrollableDistance
+      const progress = Math.min(1, Math.max(0, rawProgress))
+
+      // Decreased sensitivity: each point now occupies ~33% of a generous 280vh track
+      if (progress < 0.36) {
         setActiveTab(0)
-      } else if (progress < 0.66) {
+      } else if (progress < 0.72) {
         setActiveTab(1)
       } else {
         setActiveTab(2)
@@ -70,6 +79,28 @@ function InteractiveSystemSection() {
     window.addEventListener('scroll', handleScroll, { passive: true })
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
+
+  const handleTabClick = (index) => {
+    setActiveTab(index)
+    isManualClick.current = true
+    if (manualTimeout.current) clearTimeout(manualTimeout.current)
+    manualTimeout.current = setTimeout(() => {
+      isManualClick.current = false
+    }, 1200)
+
+    // Optionally smoothly scroll to corresponding track position
+    if (containerRef.current) {
+      const rect = containerRef.current.getBoundingClientRect()
+      const scrollableDistance = rect.height - window.innerHeight
+      const targetProgress = index === 0 ? 0.15 : index === 1 ? 0.52 : 0.88
+      const targetY = window.pageYOffset + rect.top + (scrollableDistance * targetProgress)
+      if (window.lenis && window.lenis.scrollTo) {
+        window.lenis.scrollTo(targetY, { duration: 1.2 })
+      } else {
+        window.scrollTo({ top: targetY, behavior: 'smooth' })
+      }
+    }
+  }
 
   const current = modes[activeTab]
 
@@ -83,7 +114,7 @@ function InteractiveSystemSection() {
               <SectionLabel>The Growth Engine</SectionLabel>
               <h2>Precision marketing.<br /><em>Zero guesswork.</em></h2>
               <p className="numa-system-lead">
-                Like an automated algorithm, our process continuously tests, validates, and compounds your local marketing results.
+                Like an automated algorithm, our process continuously tests, validates, and compounds your local marketing results. Scroll down to advance through each operational mode.
               </p>
 
               {/* Mode Tabs */}
@@ -94,7 +125,7 @@ function InteractiveSystemSection() {
                     role="tab"
                     aria-selected={activeTab === index}
                     className={`numa-tab-btn ${activeTab === index ? 'is-active' : ''}`}
-                    onClick={() => setActiveTab(index)}
+                    onClick={() => handleTabClick(index)}
                   >
                     <span className="numa-tab-num">{mode.number}</span>
                     <div className="numa-tab-info">
@@ -113,7 +144,9 @@ function InteractiveSystemSection() {
                   {current.metrics.map((m) => (
                     <div key={m.label} className="numa-sys-metric">
                       <small>{m.label}</small>
-                      <strong>{m.val}</strong>
+                      <strong className="numa-sys-metric-val">
+                        <AnimatedCounter value={m.val} duration={1200} />
+                      </strong>
                     </div>
                   ))}
                 </div>
@@ -122,7 +155,7 @@ function InteractiveSystemSection() {
 
             {/* Right Column: Live Parallax Visual Stage */}
             <div className="numa-system-right">
-              <Parallax speed={-5} className="numa-sys-visual-canvas">
+              <Parallax speed={-4} className="numa-sys-visual-canvas">
                 <div className="numa-sys-card-frame">
                   <div className="numa-sys-card-header">
                     <div className="numa-sys-header-left">
@@ -221,10 +254,10 @@ function InteractiveSystemSection() {
                 </div>
 
                 {/* Floating telemetry pills */}
-                <Parallax speed={7} className="numa-sys-floating-chip chip-left">
+                <Parallax speed={6} className="numa-sys-floating-chip chip-left">
                   <span>✦</span> High Intent Leads Only
                 </Parallax>
-                <Parallax speed={-9} className="numa-sys-floating-chip chip-right">
+                <Parallax speed={-7} className="numa-sys-floating-chip chip-right">
                   <span>📈</span> Verified CAC Reduction
                 </Parallax>
               </Parallax>

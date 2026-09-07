@@ -2,13 +2,13 @@ import { Link } from 'react-router-dom'
 import Container from '../components/Container'
 import SectionLabel from '../components/SectionLabel'
 import Button from '../components/Button'
-import ImpactStats from '../components/ImpactStats'
 import HeroDashboard from '../components/HeroDashboard'
 import GrowthParallax from '../components/GrowthParallax'
 import ParallaxMetrics from '../components/ParallaxMetrics'
 import ParallaxAdvantages from '../components/ParallaxAdvantages'
 import InteractiveSystemSection from '../components/InteractiveSystemSection'
 import AppShowcaseParallax from '../components/AppShowcaseParallax'
+import AnimatedCounter from '../components/AnimatedCounter'
 
 function Home() {
   return (
@@ -37,7 +37,9 @@ function Home() {
                 <b>UB</b>
                 <b>+30</b>
               </div>
-              <p>Helping 30+ local brands accelerate revenue since 2025.</p>
+              <p>
+                Helping <AnimatedCounter value={30} suffix="+" duration={1400} /> local brands accelerate revenue since 2025.
+              </p>
             </div>
           </div>
           <HeroDashboard />
@@ -59,35 +61,7 @@ function Home() {
       {/* Numa-style Real-time App Showcase with Floating Telemetry */}
       <AppShowcaseParallax />
 
-      {/* About Preview Section */}
-      <section className="section about-preview">
-        <Container className="about-grid">
-          <SectionLabel>A little about us</SectionLabel>
-          <div>
-            <h2>
-              Digital marketing made<br />
-              <em>simple and effective.</em>
-            </h2>
-            <p className="body-copy">
-              We understand the challenges of growing in a competitive market. From eye-catching social content to smart Meta Ads, we handle the entire digital growth engine so you can focus on running your business.
-            </p>
-            <Link className="text-link" to="/about">
-              Know more about us <span aria-hidden="true">↗</span>
-            </Link>
-          </div>
-          <aside className="manifesto">
-            <span>Our approach</span>
-            <strong>
-              Create with purpose.<br />
-              Stay consistent.<br />
-              Focus on results.
-            </strong>
-          </aside>
-        </Container>
-      </section>
 
-      {/* Impact Stats */}
-      <ImpactStats />
 
       {/* Closing Call to Action */}
       <section className="section green-section">

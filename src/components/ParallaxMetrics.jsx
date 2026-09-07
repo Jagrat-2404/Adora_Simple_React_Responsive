@@ -1,6 +1,7 @@
 import { Parallax } from 'react-scroll-parallax'
 import Container from './Container'
 import SectionLabel from './SectionLabel'
+import AnimatedCounter from './AnimatedCounter'
 
 const metricCards = [
   {
@@ -69,7 +70,9 @@ function ParallaxMetrics() {
                 </div>
 
                 <div className="numa-metric-big">
-                  <strong>{item.number}</strong>
+                  <strong>
+                    <AnimatedCounter value={item.number} duration={1600} />
+                  </strong>
                   <span className="numa-metric-unit">{item.unit}</span>
                 </div>
 

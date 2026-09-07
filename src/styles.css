@@ -564,50 +564,65 @@ em {
   font-size: 11px;
 }
 .services-section {
-  background: linear-gradient(135deg, var(--green), var(--green-dark));
+  background: linear-gradient(135deg, #182e24 0%, #254436 100%);
+  position: relative;
+  overflow: clip;
 }
 .service-tabs {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 8px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-bottom: 20px;
 }
 .service-tabs button {
   text-align: left;
-  min-height: 83px;
-  padding: 14px;
-  border: 1px solid var(--line);
-  background: transparent;
-  color: var(--ink);
-  font-size: 13px;
+  min-height: 88px;
+  padding: 18px 22px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  background: rgba(255, 255, 255, 0.08);
+  color: #ffffff !important;
+  font: 700 16px/1.2 "Space Grotesk";
+  letter-spacing: -0.02em;
   cursor: pointer;
-  transition: .2s ease;
-  border-radius: 3px;
+  transition: all 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
+  border-radius: 12px;
+  backdrop-filter: blur(12px);
 }
-.service-tabs button:hover:not(.active) { background: rgba(255,255,255,.6); transform: translateY(-2px); }
+.service-tabs button:hover:not(.active) {
+  background: rgba(255, 255, 255, 0.16);
+  border-color: rgba(255, 255, 255, 0.45);
+  transform: translateY(-2px);
+  color: #ffffff !important;
+}
 .service-tabs button small {
   display: block;
-  margin-bottom: 13px;
-  color: #d7dfca;
-  font-size: 9px;
+  margin-bottom: 8px;
+  color: #f2b69d !important;
+  font: 700 11px "Space Grotesk";
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
 }
 .service-tabs button.active {
-  background: var(--pink);
-  color: var(--green-dark);
-  border-color: var(--pink);
+  background: #ffffff !important;
+  color: #162c21 !important;
+  border-color: #ffffff !important;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.28), 0 4px 0 #f2b69d;
+  transform: translateY(-3px);
 }
 .service-tabs button.active small {
-  color: var(--green-dark);
+  color: #c55f46 !important;
+  font-weight: 700;
 }
 .service-card {
   display: grid;
   grid-template-columns: 68px 1fr 120px;
   gap: 28px;
   margin-top: 12px;
-  padding: 38px;
+  padding: 44px 38px;
   background: var(--paper);
-  border: 1px solid var(--line);
-  border-radius: 5px;
-  box-shadow: 0 15px 35px rgba(21,52,43,.06);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 16px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.22);
 }
 .service-icon {
   display: grid;
@@ -627,37 +642,78 @@ em {
 }
 .service-card h2 {
   max-width: 550px;
-  margin: 0 0 13px;
-  font: 600 31px/1.05 "Space Grotesk";
-  letter-spacing: -0.065em;
+  margin: 0 0 14px;
+  font: 600 32px/1.1 "Space Grotesk";
+  letter-spacing: -0.05em;
+  color: #162c21 !important;
 }
 .service-card > div:nth-child(2) > p:not(.service-index) {
   max-width: 570px;
-  color: var(--muted);
-  font-size: 13px;
+  color: #2d4236 !important;
+  font-size: 15px !important;
+  line-height: 1.65 !important;
 }
 .service-card ul {
   padding: 0;
-  margin: 19px 0 0;
+  margin: 20px 0 0;
   list-style: none;
-  color: var(--muted);
-  font-size: 11px;
+  color: #162c21 !important;
+  font-size: 13px !important;
 }
 .service-card li {
-  margin: 7px 0;
+  margin: 9px 0;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 .service-link {
   align-self: end;
+  font-weight: 700;
+  color: #162c21 !important;
 }
-.service-note {
-  padding: 45px;
-  border-left: 5px solid var(--peach);
-  background: var(--pink-light);
-  border-radius: 4px;
+.service-note,
+.numa-service-cta,
+.numa-process-cta {
+  padding: 56px 48px;
+  background: #ffffff !important;
+  border: 1px solid rgba(47, 79, 61, 0.16) !important;
+  border-left: 8px solid #c55f46 !important;
+  border-radius: 16px;
+  box-shadow: 0 20px 50px rgba(31, 42, 37, 0.08);
 }
-.service-note h2 {
+.service-note h2,
+.numa-service-cta h2,
+.numa-process-cta h2 {
   margin-bottom: 26px;
-  font-size: 48px;
+  font: 600 clamp(36px, 4.8vw, 56px)/1.04 "Space Grotesk" !important;
+  letter-spacing: -0.05em;
+  color: #162c21 !important;
+}
+.service-note .section-label,
+.numa-service-cta .section-label,
+.numa-process-cta .section-label {
+  color: #8b4533 !important;
+  font-weight: 800;
+}
+.service-note .section-label i,
+.numa-service-cta .section-label i,
+.numa-process-cta .section-label i {
+  background: #c55f46 !important;
+}
+.service-note .button,
+.numa-service-cta .button,
+.numa-process-cta .button {
+  background: #162c21 !important;
+  color: #ffffff !important;
+  box-shadow: 0 5px 0 #0c1813 !important;
+  font-weight: 700;
+  font-size: 13px;
+}
+.service-note .button:hover,
+.numa-service-cta .button:hover,
+.numa-process-cta .button:hover {
+  background: #0c1813 !important;
 }
 .story-grid {
   display: grid;
@@ -1720,12 +1776,14 @@ em {
    ========================================================================== */
 .numa-system-section {
   position: relative;
-  padding: 130px 0;
+  min-height: 280vh;
+  padding: 40px 0 100px;
   background: #fbf7f2;
 }
 .numa-system-sticky-wrapper {
   position: sticky;
-  top: 110px;
+  top: 100px;
+  z-index: 2;
 }
 .numa-system-layout {
   display: grid;
@@ -2214,6 +2272,647 @@ em {
   background: rgba(47, 79, 61, 0.08);
   padding: 2px 7px;
   border-radius: 4px;
+}
+
+/* ==========================================================================
+   Numa-style Parallax on Inner Pages
+   ========================================================================== */
+
+/* Upgraded PageHero with Ambient Parallax Orbs & Floating Badges */
+.numa-page-hero {
+  position: relative;
+  overflow: clip;
+  padding: 110px 0 100px;
+}
+.page-hero-ambient-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(60px);
+  pointer-events: none;
+}
+.orb-hero-left {
+  width: 360px;
+  height: 360px;
+  top: -60px;
+  left: -80px;
+  background: rgba(242, 182, 157, 0.28);
+}
+.orb-hero-right {
+  width: 420px;
+  height: 420px;
+  right: -100px;
+  bottom: -40px;
+  background: rgba(47, 79, 61, 0.08);
+}
+.page-hero-inner {
+  position: relative;
+}
+.page-hero-badge-left {
+  position: absolute;
+  top: 10px;
+  right: 40px;
+}
+.page-hero-badge-right {
+  position: absolute;
+  bottom: 0px;
+  right: 120px;
+}
+
+/* About Page Parallax Styles */
+.numa-story-section {
+  position: relative;
+  overflow: clip;
+  background: linear-gradient(135deg, #152d22 0%, #203f31 100%) !important;
+  color: #ffffff !important;
+  padding: 130px 0;
+}
+.numa-story-section h2 {
+  color: #ffffff !important;
+  font: 600 clamp(36px, 4.8vw, 58px)/1.04 "Space Grotesk" !important;
+  letter-spacing: -0.05em;
+  margin-top: 14px;
+}
+.numa-story-section h2 em {
+  color: #f2b69d !important;
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+}
+.numa-story-section .section-label {
+  color: #f2b69d !important;
+}
+.numa-story-section .section-label i {
+  background: #f2b69d !important;
+}
+.numa-story-section p {
+  color: rgba(255, 255, 255, 0.94) !important;
+  font-size: 16px !important;
+  line-height: 1.75 !important;
+}
+.about-stats-strip {
+  display: flex;
+  gap: 36px;
+  margin-top: 38px;
+  padding-top: 26px;
+  border-top: 1px solid rgba(255, 255, 255, 0.22);
+}
+.about-stat-item strong {
+  display: block;
+  font: 700 clamp(32px, 3.6vw, 48px)/1 "Space Grotesk" !important;
+  letter-spacing: -0.06em;
+  color: #f2b69d !important;
+}
+.about-stat-item small {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.85) !important;
+  margin-top: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+.story-card-wrapper {
+  background: rgba(255, 255, 255, 0.1) !important;
+  border: 1px solid rgba(255, 255, 255, 0.22) !important;
+  border-radius: 18px;
+  padding: 42px 36px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.3) !important;
+  backdrop-filter: blur(16px);
+}
+.story-card-wrapper p {
+  color: rgba(255, 255, 255, 0.95) !important;
+  font-size: 16px !important;
+  line-height: 1.75 !important;
+}
+.story-actions {
+  margin-top: 28px;
+}
+.numa-story-section .text-link {
+  color: #f2b69d !important;
+  border-bottom-color: #f2b69d !important;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+.numa-story-section .text-link:hover {
+  color: #ffffff !important;
+  border-bottom-color: #ffffff !important;
+}
+.numa-values-section {
+  padding: 130px 0;
+  background: #fbf6f0;
+}
+.values-header {
+  max-width: 600px;
+  margin-bottom: 65px;
+}
+.values-header h2 {
+  font: 600 clamp(38px, 5vw, 68px)/0.96 "Space Grotesk";
+  letter-spacing: -0.07em;
+  margin: 14px 0 0;
+}
+.numa-values-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  align-items: start;
+}
+.val-col-1 { padding-top: 25px; }
+.val-col-2 { padding-top: 0px; }
+.val-col-3 { padding-top: 50px; }
+
+.numa-val-card {
+  position: relative;
+  background: var(--paper);
+  border: 1px solid rgba(47, 79, 61, 0.1);
+  border-radius: 14px;
+  padding: 32px 26px;
+  box-shadow: 0 16px 40px rgba(31, 42, 37, 0.06), 6px 8px 0 rgba(47, 79, 61, 0.04);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.numa-val-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 50px rgba(31, 42, 37, 0.1), 8px 10px 0 rgba(47, 79, 61, 0.06);
+}
+.numa-val-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.numa-val-num {
+  font: 700 13px "Space Grotesk";
+  color: var(--peach);
+}
+.numa-val-dot {
+  font: 700 10px "Space Grotesk";
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--green);
+  background: rgba(47, 79, 61, 0.07);
+  padding: 3px 8px;
+  border-radius: 999px;
+}
+.numa-val-card h3 {
+  font: 600 22px/1.25 "Space Grotesk";
+  letter-spacing: -0.04em;
+  margin: 0 0 12px;
+}
+.numa-val-card p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--muted);
+  margin: 0;
+}
+.numa-val-rule {
+  height: 2px;
+  background: var(--green);
+  width: 32px;
+  margin-top: 20px;
+  border-radius: 2px;
+  opacity: 0.6;
+}
+
+/* Services Page Parallax Styles */
+.numa-services-deliverables {
+  padding: 130px 0;
+  background: #f8efe8;
+}
+.numa-serv-intro {
+  max-width: 600px;
+  margin-bottom: 65px;
+}
+.numa-serv-intro h2 {
+  font: 600 clamp(38px, 5vw, 68px)/0.96 "Space Grotesk";
+  letter-spacing: -0.07em;
+  margin: 14px 0 0;
+}
+.numa-serv-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  align-items: start;
+}
+.numa-serv-col:nth-child(1) { padding-top: 20px; }
+.numa-serv-col:nth-child(2) { padding-top: 0px; }
+.numa-serv-col:nth-child(3) { padding-top: 45px; }
+
+.numa-serv-deliverable-card {
+  background: var(--paper);
+  border: 1px solid rgba(47, 79, 61, 0.1);
+  border-radius: 14px;
+  padding: 32px 26px;
+  box-shadow: 0 16px 40px rgba(31, 42, 37, 0.06), 6px 8px 0 rgba(47, 79, 61, 0.04);
+  transition: transform 0.3s ease;
+}
+.numa-serv-deliverable-card:hover {
+  transform: translateY(-6px);
+}
+.numa-serv-badge {
+  display: inline-block;
+  font: 700 10px "Space Grotesk";
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--green);
+  background: rgba(47, 79, 61, 0.07);
+  padding: 4px 9px;
+  border-radius: 999px;
+  margin-bottom: 16px;
+}
+.numa-serv-deliverable-card h3 {
+  font: 600 20px/1.25 "Space Grotesk";
+  letter-spacing: -0.04em;
+  margin: 0 0 10px;
+}
+.numa-serv-deliverable-card p {
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--muted);
+  margin-bottom: 24px;
+}
+.numa-serv-stat {
+  border-top: 1px solid var(--line);
+  padding-top: 14px;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+.numa-serv-stat strong {
+  font: 700 24px "Space Grotesk";
+  color: var(--ink);
+}
+.numa-serv-stat span {
+  font-size: 11px;
+  color: var(--muted);
+}
+
+/* Process Page Parallax Styles */
+.numa-process-section {
+  position: relative;
+  overflow: clip;
+}
+.process-header-wrap {
+  margin-bottom: 60px;
+}
+.process-header-wrap h2 {
+  font: 600 clamp(38px, 5vw, 68px)/0.96 "Space Grotesk";
+  letter-spacing: -0.07em;
+  margin: 14px 0 0;
+  color: var(--paper);
+}
+.process-header-wrap .section-label {
+  color: #d7dfca;
+}
+.numa-process-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  align-items: start;
+}
+.proc-col-1 { padding-top: 20px; }
+.proc-col-2 { padding-top: 0px; }
+.proc-col-3 { padding-top: 45px; }
+
+.numa-proc-card {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 14px;
+  padding: 32px 26px;
+  backdrop-filter: blur(12px);
+  color: var(--paper);
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.16);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+.numa-proc-card:hover {
+  transform: translateY(-6px);
+  background: rgba(255, 255, 255, 0.12);
+}
+.numa-proc-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.numa-proc-num {
+  font: 700 14px "Space Grotesk";
+  color: var(--peach);
+}
+.numa-proc-phase {
+  font: 700 10px "Space Grotesk";
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #d7dfca;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 3px 8px;
+  border-radius: 999px;
+}
+.numa-proc-card h2 {
+  font: 600 24px/1.2 "Space Grotesk" !important;
+  letter-spacing: -0.04em;
+  margin: 0 0 12px;
+  color: var(--paper);
+}
+.numa-proc-card p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 24px;
+}
+.numa-proc-arrow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  padding-top: 14px;
+  font: 600 11px "Space Grotesk";
+  color: var(--peach);
+}
+
+/* Portfolio Page Parallax Styles */
+.numa-portfolio-section {
+  position: relative;
+  overflow: clip;
+  padding: 110px 0 130px;
+  background: var(--paper);
+}
+.numa-portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  align-items: start;
+}
+.port-col-1 { padding-top: 20px; }
+.port-col-2 { padding-top: 0px; }
+.port-col-3 { padding-top: 45px; }
+
+.numa-port-card {
+  background: var(--paper);
+  border: 1px solid rgba(47, 79, 61, 0.12);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 18px 44px rgba(31, 42, 37, 0.08), 6px 8px 0 rgba(47, 79, 61, 0.04);
+  transition: transform 0.3s ease;
+}
+.numa-port-card:hover {
+  transform: translateY(-8px);
+}
+.numa-port-image {
+  position: relative;
+  background: linear-gradient(135deg, var(--peach) 0%, var(--beige) 100%);
+  height: 200px;
+  display: grid;
+  place-items: center;
+}
+.numa-port-floating-tag {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(8px);
+  padding: 4px 10px;
+  border-radius: 999px;
+  font: 700 9px "Space Grotesk";
+  text-transform: uppercase;
+  color: var(--green-dark);
+}
+.numa-port-content {
+  padding: 26px 22px;
+}
+.numa-port-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.numa-port-num {
+  font: 700 10px "Space Grotesk";
+  color: var(--peach);
+}
+.numa-port-content h3 {
+  font: 600 22px/1.25 "Space Grotesk";
+  letter-spacing: -0.04em;
+  margin: 0 0 10px;
+}
+.numa-port-content p {
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--muted);
+  margin-bottom: 20px;
+}
+.numa-port-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid var(--line);
+  padding-top: 14px;
+  font: 600 11px "Space Grotesk";
+  color: var(--green);
+}
+
+/* Contact Page Parallax Styles - High Contrast */
+.numa-contact-section {
+  position: relative;
+  padding: 130px 0;
+  background: linear-gradient(135deg, #152d22 0%, #203f31 100%) !important;
+  color: #ffffff !important;
+}
+.numa-contact-section h2 {
+  color: #ffffff !important;
+  font: 600 clamp(38px, 5vw, 64px)/1.02 "Space Grotesk" !important;
+  letter-spacing: -0.05em;
+  margin: 14px 0 18px;
+}
+.numa-contact-section h2 em {
+  color: #f2b69d !important;
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+}
+.numa-contact-section .section-label {
+  color: #f2b69d !important;
+}
+.numa-contact-section .section-label i {
+  background: #f2b69d !important;
+}
+.numa-contact-section p {
+  color: rgba(255, 255, 255, 0.94) !important;
+  font-size: 16px !important;
+  line-height: 1.75 !important;
+  max-width: 480px;
+}
+.numa-contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 32px 0;
+}
+.numa-contact-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  font: 700 15px "Space Grotesk" !important;
+  color: #ffffff !important;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 11px 18px;
+  border-radius: 10px;
+  width: fit-content;
+  backdrop-filter: blur(10px);
+  transition: all 0.25s ease;
+}
+.numa-contact-link:hover {
+  background: rgba(255, 255, 255, 0.18);
+  border-color: #f2b69d;
+  color: #f2b69d !important;
+  transform: translateX(5px);
+}
+.link-icon {
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  background: rgba(242, 182, 157, 0.22);
+  color: #f2b69d;
+  font-size: 13px;
+}
+.numa-contact-floating-strip {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 28px;
+}
+.contact-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 16px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 999px;
+  width: fit-content;
+  font-size: 12px;
+  font-weight: 600;
+  color: #ffffff;
+}
+.contact-pill span {
+  color: #f2b69d;
+}
+.numa-form-card {
+  background: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  border-radius: 20px;
+  padding: 44px 38px;
+  box-shadow: 0 35px 80px rgba(0, 0, 0, 0.35);
+}
+.numa-form-card .contact-form {
+  background: transparent !important;
+  padding: 0 !important;
+  color: #173326 !important;
+}
+.numa-form-card .contact-form label {
+  color: #173326 !important;
+  font-weight: 700;
+  font-size: 13px;
+  display: block;
+  margin-bottom: 20px;
+}
+.numa-form-card .contact-form input,
+.numa-form-card .contact-form textarea {
+  color: #173326 !important;
+  border-bottom: 2px solid #ccd8d1 !important;
+  font-size: 15px;
+  background: transparent !important;
+  width: 100%;
+  display: block;
+  margin-top: 6px;
+}
+.numa-form-card .contact-form input:focus,
+.numa-form-card .contact-form textarea:focus {
+  border-bottom-color: #173326 !important;
+  outline: none;
+}
+.numa-form-card .contact-form input::placeholder,
+.numa-form-card .contact-form textarea::placeholder {
+  color: #7b8a82 !important;
+}
+.numa-form-card .form-button {
+  background: #173326 !important;
+  color: #ffffff !important;
+  box-shadow: 0 5px 0 #0d1e16 !important;
+  font-size: 13px;
+  font-weight: 700;
+}
+.numa-form-card .form-button:hover {
+  background: #0d1e16 !important;
+}
+
+/* Terms Page Parallax Styles */
+.numa-terms-section {
+  padding: 110px 0;
+}
+.numa-terms-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.numa-term-item {
+  display: flex;
+  gap: 24px;
+  padding: 24px 28px;
+  background: var(--paper);
+  border: 1px solid rgba(47, 79, 61, 0.08);
+  border-radius: 12px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.numa-term-item:hover {
+  transform: translateX(4px);
+  box-shadow: 0 10px 24px rgba(31, 42, 37, 0.05);
+}
+.numa-term-item span {
+  font: 700 14px "Space Grotesk";
+  color: var(--peach);
+}
+.numa-term-item h2 {
+  font: 600 20px/1.25 "Space Grotesk";
+  margin: 0 0 8px;
+}
+.numa-term-item p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+/* Responsive adjustments for inner pages */
+@media (max-width: 1024px) {
+  .numa-values-grid,
+  .numa-serv-grid,
+  .numa-process-grid,
+  .numa-portfolio-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .val-col-1, .val-col-2, .val-col-3,
+  .proc-col-1, .proc-col-2, .proc-col-3,
+  .port-col-1, .port-col-2, .port-col-3,
+  .numa-serv-col {
+    padding-top: 0;
+  }
+  .page-hero-badge-left,
+  .page-hero-badge-right {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .numa-values-grid,
+  .numa-serv-grid,
+  .numa-process-grid,
+  .numa-portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+  .numa-term-item {
+    flex-direction: column;
+    gap: 8px;
+  }
 }
 
 /* ==========================================================================
