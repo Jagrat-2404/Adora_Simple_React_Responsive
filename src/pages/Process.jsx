@@ -3,5 +3,10 @@ import Container from '../components/Container'
 import SectionLabel from '../components/SectionLabel'
 import PageHero from '../components/PageHero'
 import ProcessSteps from '../components/ProcessSteps'
-function Process() { return <><PageHero label="How we work" title="Less mystery." italicTitle="More movement." description="A straightforward way of getting good work into the world."/><section className="section green-section"><Container><ProcessSteps /></Container></section><section className="section"><Container className="service-note"><SectionLabel>Ready to begin?</SectionLabel><h2>It starts with<br /><em>a hello.</em></h2><Link className="button" to="/contact">Tell us what’s next <span>↗</span></Link></Container></section></> }
+function Process() {
+  return <><PageHero label="Our process" title="A practical plan." italicTitle="Clear progress." description="A straightforward way to build a stronger digital presence for your business." />
+    <section className="section green-section"><Container><ProcessSteps /></Container></section>
+    <section className="section"><Container className="service-note"><SectionLabel>Ready to begin?</SectionLabel><h2>It starts with<br /><em>a simple conversation.</em></h2><Link className="button" to="/contact">Tell us about your business <span>↗</span></Link></Container></section>
+  </>
+}
 export default Process

@@ -1,13 +1,28 @@
-export const navigation = [{ label: 'Home', path: '/' }, { label: 'Services', path: '/services' }, { label: 'Why Adora', path: '/about' }, { label: 'How we work', path: '/process' }]
-export const services = [
-  { number: '01', name: 'Social media', icon: 'spark', title: 'Make your brand part of the conversation.', description: 'Content, strategy and a visual presence that gives people a reason to stop, follow and remember you.', points: ['Monthly content direction', 'Designs & short-form video', 'Clear reporting'] },
-  { number: '02', name: 'Meta Ads', icon: 'target', title: 'Turn attention into measurable action.', description: 'Smart campaigns with thoughtful creative, useful audiences and a practical focus on leads and sales.', points: ['Campaign strategy', 'Creative testing', 'Weekly optimisation'] },
-  { number: '03', name: 'Web design', icon: 'layout', title: 'A website that feels like your best first impression.', description: 'Fast, considered websites that make your offer simple to understand and easy to act on.', points: ['UX & visual design', 'Responsive development', 'Launch support'] },
-  { number: '04', name: 'Custom apps', icon: 'code', title: 'Useful digital tools, built around your business.', description: 'From focused internal workflows to customer-facing products, we build the practical thing you need.', points: ['Product discovery', 'Custom development', 'Ongoing support'] },
+export const navigation = [
+  { label: 'Home', path: '/' }, { label: 'About us', path: '/about' },
+  { label: 'Services', path: '/services' }, { label: 'Contact us', path: '/contact' },
 ]
-export const processSteps = [{ number: '01', title: 'Start with a real conversation', description: 'Tell us what is changing, what is stuck, and where you want to go.' }, { number: '02', title: 'Find the clearest next step', description: 'We shape a focused plan with the work, timing and expectations out in the open.' }, { number: '03', title: 'Make it happen together', description: 'We work in the open, share progress often and keep useful things moving.' }]
-export const values = [{ number: '01', title: 'Clarity', description: 'Good work starts when everyone understands what matters.' }, { number: '02', title: 'Care', description: 'We sweat the details, because the details are where trust lives.' }, { number: '03', title: 'Momentum', description: 'We prefer practical progress over perfect plans that never leave the page.' }]
-export const stats = [{ value: 50, suffix: '+', label: 'brands partnered with' }, { value: 120, suffix: '+', label: 'projects brought to life' }, { value: 8, suffix: 'M+', label: 'people reached' }, { value: 96, suffix: '%', label: 'repeat client partnerships' }]
+export const services = [
+  { number: '01', name: 'Social media marketing', icon: 'spark', title: 'Stay visible. Build trust. Grow consistently.', description: 'We create engaging content strategies that help your brand stay active, consistent, and recognisable online.', points: ['Content strategy and monthly planning', 'Creative social media designs', 'Consistent posting and reporting'] },
+  { number: '02', name: 'Meta Ads', icon: 'target', title: 'Targeted campaigns built to bring real results.', description: 'From campaign strategy to optimisation, we run practical Meta Ads designed to generate leads, enquiries, and growth.', points: ['Campaign setup and audience targeting', 'Creative testing and optimisation', 'Clear performance reporting'] },
+]
+export const processSteps = [
+  { number: '01', title: 'Understand your business', description: 'We learn about your goals, audience, and the challenges you want to solve.' },
+  { number: '02', title: 'Create a custom plan', description: 'We tailor social media, creative, and ad activity around what your business needs.' },
+  { number: '03', title: 'Execute, track, and improve', description: 'We post consistently, optimise campaigns, and share clear insights to keep growth on track.' },
+]
+export const values = [
+  { number: '01', title: 'Simple and clear', description: 'No confusing jargon—just practical work you can understand and use.' },
+  { number: '02', title: 'Focused on results', description: 'We focus on the outcomes that matter: enquiries, leads, and sales.' },
+  { number: '03', title: 'Built around you', description: 'Every design and strategy is tailored to your industry and goals.' },
+]
+export const stats = [
+  { value: 30, suffix: '+', label: 'businesses supported' }, { value: 4, suffix: '+', label: 'industries served' },
+  { value: 2025, suffix: '', label: 'founded in Surat' }, { value: 2, suffix: '', label: 'core growth services' },
+]
+
 export const projects = [
-  { title: 'E-Commerce Platform', category: 'Web Development', description: 'Full-stack e-commerce solution with payment integration', icon: 'cart' }, { title: 'Mobile Banking App', category: 'Mobile Development', description: 'Secure mobile banking application for iOS and Android', icon: 'phone' }, { title: 'Design System', category: 'UI/UX Design', description: 'Comprehensive design system for enterprise applications', icon: 'palette' }, { title: 'Analytics Dashboard', category: 'Web Development', description: 'Real-time analytics and reporting platform', icon: 'chart' }, { title: 'Social Network', category: 'Full Stack', description: 'Social media platform with real-time features', icon: 'message' }, { title: 'AI Chatbot', category: 'Backend Development', description: 'Intelligent chatbot with natural language processing', icon: 'bot' },
+  { title: 'Photography Studio', category: 'Meta Ads', description: 'Generated dozens of local leads within 10 days through targeted Meta Ads.', icon: 'target' },
+  { title: 'Jewellery Brand', category: 'Social media and ads', description: 'Reached three times more people in 30 days with reels and advertising.', icon: 'spark' },
+  { title: 'Unisex Salon', category: 'Social media ads', description: 'Saw 40% more enquiries with targeted social advertising.', icon: 'message' },
 ]
