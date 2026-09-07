@@ -3,5 +3,15 @@ import Container from '../components/Container'
 import SectionLabel from '../components/SectionLabel'
 import PageHero from '../components/PageHero'
 import { values } from '../data/siteData'
-function About() { return <><PageHero label="Why Adora" title="Good work needs" italicTitle="good company." description="We’re the thoughtful, practical partner behind the next version of your business."/><section className="section"><Container className="story-grid"><div><SectionLabel>The short version</SectionLabel><h2>Strategy, design and delivery — all pulling in the same direction.</h2></div><div><p>Adora Solution is a focused digital studio for startups and local businesses. We work closely, ask useful questions, and make sure every piece of work has a job to do.</p><p>There is no inflated process or hard sell. Just clear thinking, considered execution and a reliable team that cares about the outcome.</p><Link className="text-link" to="/contact">Work with us <span>↗</span></Link></div></Container></section><section className="section green-section"><Container className="values-grid"><SectionLabel>What matters to us</SectionLabel>{values.map(value => <article key={value.number}><span>{value.number}</span><h3>{value.title}</h3><p>{value.description}</p></article>)}</Container></section></> }
+
+function About() {
+  return <><PageHero label="Who we are" title="Your digital partner" italicTitle="for local growth." description="Adora Solution helps startups and small businesses grow online without unnecessary complexity or high costs." />
+    <section className="section story-section"><Container className="story-grid"><div><SectionLabel>Our story</SectionLabel><h2>Simple, creative, and focused on real customers.</h2></div><div>
+      <p>Every business deserves to stand out online—whether it is a local jewellery store, photography studio, food brand, or salon. We create practical strategies that help you build visibility, trust, and meaningful customer interest.</p>
+      <p>Founded in Surat in 2025, we bring together consistent social media, creative graphic design, and performance-driven Meta Ads to help local brands achieve more online.</p>
+      <Link className="text-link" to="/contact">Work with us <span>↗</span></Link>
+    </div></Container></section>
+    <section className="section values-section"><Container className="values-grid"><SectionLabel>Why businesses trust us</SectionLabel>{values.map(value => <article key={value.number}><span>{value.number}</span><h3>{value.title}</h3><p>{value.description}</p></article>)}</Container></section>
+  </>
+}
 export default About
