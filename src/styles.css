@@ -45,7 +45,9 @@ textarea {
 .header {
   position: sticky;
   top: 0;
-  z-index: 10;
+  /* Parallax elements are transformed and create their own stacking contexts.
+     Keep the global navigation above every page-level floating badge. */
+  z-index: 1000;
   background: rgba(232, 244, 237, .58);
   color: var(--green-dark);
   border-bottom: 1px solid rgba(255, 255, 255, .6);
@@ -1472,7 +1474,7 @@ em {
 /* Floating Pill Badges (Hero Parallax) */
 .floating-pill-badge {
   position: absolute;
-  z-index: 10;
+  z-index: 2;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -2416,6 +2418,39 @@ em {
   gap: 32px;
   align-items: start;
 }
+
+/* Meet the team */
+.team-section { background: var(--paper); }
+.team-heading { max-width: 620px; margin-bottom: 65px; }
+.team-heading h2 { margin: 14px 0 0; font: 600 clamp(38px, 5vw, 68px)/.96 "Space Grotesk"; letter-spacing: -.07em; }
+.team-preview-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 110px; }
+.team-preview-card { position: relative; min-height: 280px; overflow: hidden; border-radius: 10px; background: var(--green); }
+.team-preview-card::after { content: ""; position: absolute; inset: 30% 0 0; background: linear-gradient(transparent, rgba(20,43,33,.82)); }
+.team-preview-card img { width: 100%; height: 100%; position: absolute; inset: 0; object-fit: cover; transition: transform .5s ease; }
+.team-preview-card:hover img { transform: scale(1.06); }
+.team-preview-card div { position: absolute; z-index: 1; right: 20px; bottom: 18px; left: 20px; color: var(--paper); }
+.team-preview-card span, .team-preview-card strong, .team-preview-card small { display: block; }
+.team-preview-card span { margin-bottom: 20px; color: var(--peach); font-size: 10px; font-weight: 700; letter-spacing: .1em; }
+.team-preview-card strong { font: 600 23px/1 "Space Grotesk"; letter-spacing: -.06em; }
+.team-preview-card small { margin-top: 5px; font-size: 10px; letter-spacing: .06em; text-transform: uppercase; }
+.team-scroll-story { display: grid; grid-template-columns: minmax(0, .9fr) minmax(390px, 1.1fr); gap: clamp(45px, 8vw, 130px); align-items: start; }
+.team-scroll-steps article { min-height: 60vh; padding: 15vh 0 15vh 32px; border-left: 1px solid rgba(47,79,61,.2); color: var(--muted); opacity: .42; transition: color .45s ease, opacity .45s ease; }
+.team-scroll-steps article:first-child { padding-top: 6vh; }
+.team-scroll-steps article:last-child { min-height: 48vh; }
+.team-scroll-steps article.is-active { color: var(--ink); opacity: 1; }
+.team-scroll-steps span { display: block; margin-left: -32px; color: #bd715d; font-size: 10px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
+.team-scroll-steps h3 { margin: 17px 0 4px; font: 600 clamp(31px, 3.4vw, 48px)/1 "Space Grotesk"; letter-spacing: -.07em; }
+.team-scroll-steps strong { color: var(--green); font-size: 12px; letter-spacing: .05em; text-transform: uppercase; }
+.team-scroll-steps p { max-width: 410px; margin: 18px 0 0; font-size: 15px; line-height: 1.65; }
+.team-sticky-showcase { position: sticky; top: 126px; height: min(60vw, 570px); min-height: 430px; isolation: isolate; }
+.team-showcase-image { position: absolute; z-index: 1; inset: 14px 0 28px 28px; overflow: hidden; border-radius: 150px 150px 12px 12px; box-shadow: 20px 22px 0 rgba(47,79,61,.12), var(--shadow); }
+.team-showcase-image img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transform: scale(1.08); transition: opacity .7s ease, transform 1.15s cubic-bezier(.2,.75,.25,1); }
+.team-showcase-image img.is-active { opacity: 1; transform: scale(1); }
+.team-showcase-orb { position: absolute; z-index: 0; border-radius: 50%; pointer-events: none; }
+.team-showcase-orb-one { width: 290px; height: 290px; top: -30px; right: -80px; border: 1px solid rgba(47,79,61,.2); }
+.team-showcase-orb-two { width: 220px; height: 220px; bottom: -36px; left: -32px; background: rgba(242,182,157,.38); }
+.team-showcase-count { position: absolute; z-index: 2; left: 0; bottom: 0; padding: 13px 18px; background: var(--green); color: var(--paper); font: 600 16px "Space Grotesk"; }
+.team-showcase-count span { color: var(--peach); font-size: 11px; }
 .val-col-1 { padding-top: 25px; }
 .val-col-2 { padding-top: 0px; }
 .val-col-3 { padding-top: 50px; }
@@ -2913,6 +2948,18 @@ em {
     flex-direction: column;
     gap: 8px;
   }
+  .team-heading { margin-bottom: 36px; }
+  .team-preview-grid { gap: 10px; margin-bottom: 64px; }
+  .team-preview-card { min-height: 190px; }
+  .team-preview-card div { right: 12px; bottom: 12px; left: 12px; }
+  .team-preview-card span { margin-bottom: 10px; }
+  .team-preview-card strong { font-size: 17px; }
+  .team-preview-card small { font-size: 8px; }
+  .team-scroll-story { grid-template-columns: 1fr; gap: 24px; }
+  .team-sticky-showcase { position: relative; top: auto; order: -1; height: 430px; min-height: 0; }
+  .team-scroll-steps article, .team-scroll-steps article:first-child, .team-scroll-steps article:last-child { min-height: auto; padding: 38px 0 38px 26px; }
+  .team-scroll-steps span { margin-left: -26px; }
+  .team-showcase-image { inset: 12px 0 22px 18px; }
 }
 
 /* ==========================================================================

@@ -4,6 +4,7 @@ import Container from '../components/Container'
 import SectionLabel from '../components/SectionLabel'
 import PageHero from '../components/PageHero'
 import AnimatedCounter from '../components/AnimatedCounter'
+import TeamSection from '../components/TeamSection'
 import { values } from '../data/siteData'
 
 function About() {
@@ -98,6 +99,7 @@ function About() {
           </div>
         </Container>
       </section>
+      <TeamSection />
     </>
   )
 }
