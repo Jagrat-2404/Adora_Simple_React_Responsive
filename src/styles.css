@@ -1,16 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&family=Space+Grotesk:wght@400;500;600;700&display=swap");
 :root {
-  --green: #174637;
-  --green-dark: #0b2d23;
-  --ink: #15342b;
-  --paper: #fffef5;
-  --deep: #f5f5dc;
-  --beige: #f5f5dc;
-  --peach: #ffb28d;
-  --gold: #f5cf76;
-  --line: #d6dfd2;
-  --muted: #63756d;
-  --shadow: 0 24px 55px rgba(21, 52, 43, .13);
+  --green: #2f4f3d;
+  --green-dark: #1d342b;
+  --ink: #1f2a25;
+  --paper: #fffaf4;
+  --deep: #f8efe8;
+  --beige: #f9ecd9;
+  --peach: #f2b69d;
+  --gold: #d7b77d;
+  --line: #ecd9c8;
+  --muted: #5d685f;
+  --shadow: 0 28px 60px rgba(31, 42, 37, .12);
 }
 * {
   box-sizing: border-box;
@@ -384,6 +384,10 @@ em {
 .section {
   padding: 120px 0;
 }
+.about-preview {
+  background: linear-gradient(135deg, #213d33 0%, #29493e 42%, #355c49 100%);
+  color: var(--paper);
+}
 .about-grid {
   display: grid;
   grid-template-columns: 0.55fr 1.25fr 0.7fr;
@@ -396,26 +400,41 @@ em {
 .body-copy {
   max-width: 530px;
   margin: 25px 0;
-  color: var(--muted);
+  color: rgba(255, 250, 244, 0.82);
   font-size: 15px;
 }
 .manifesto {
   align-self: end;
-  padding: 23px;
-  border: 1px solid var(--line);
-  border-radius: 3px;
-  box-shadow: 8px 8px 0 var(--deep);
+  padding: 28px 24px 22px;
+  background: linear-gradient(135deg, #f8e8dc 0%, #f4c8af 100%);
+  border: 1px solid rgba(33, 61, 51, 0.1);
+  border-radius: 16px;
+  box-shadow: 14px 14px 0 rgba(17, 28, 24, 0.15);
+  color: var(--green-dark);
 }
 .manifesto span {
   display: block;
   margin-bottom: 29px;
-  color: var(--muted);
+  color: var(--green-dark);
   font-size: 9px;
   text-transform: uppercase;
   letter-spacing: 0.1em;
 }
 .manifesto strong {
   font: 600 21px/1.1 "Playfair Display";
+  color: var(--green-dark);
+}
+.about-preview .text-link {
+  color: #f7d8c7;
+}
+.about-preview .text-link:hover {
+  color: #fffaf4;
+}
+.about-preview .section-label {
+  color: #f6d5c3;
+}
+.about-preview .section-label i {
+  background: var(--peach);
 }
 .green-section {
   position: relative;
