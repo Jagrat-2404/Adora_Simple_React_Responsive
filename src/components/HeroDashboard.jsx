@@ -12,14 +12,14 @@ function HeroDashboard() {
       </Parallax>
 
       {/* Layer 1: Backing Team Photo Frame with Parallax Shift */}
-      <Parallax speed={-14} className="hero-photo hero-photo-back">
+      {/* <Parallax speed={-14} className="hero-photo hero-photo-back">
         <img
           src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1000&q=85"
           alt="Marketing team strategizing together"
           loading="eager"
         />
         <div className="hero-photo-overlay" />
-      </Parallax>
+      </Parallax> */}
 
       {/* Layer 2: Main Floating 3D Dashboard Card */}
       <Parallax speed={6} className="dashboard-parallax">

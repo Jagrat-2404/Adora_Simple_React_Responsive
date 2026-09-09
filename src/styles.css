@@ -1474,7 +1474,9 @@ em {
 /* Floating Pill Badges (Hero Parallax) */
 .floating-pill-badge {
   position: absolute;
-  z-index: 2;
+  /* Keep the hero badges above the transformed dashboard layer. The sticky
+     header remains above them with its global z-index of 1000. */
+  z-index: 4;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -1535,9 +1537,7 @@ em {
   position: relative;
   overflow: clip;
   padding: 110px 0 130px;
-  background: radial-gradient(circle at 15% 30%, rgba(242, 182, 157, 0.18) 0, transparent 40%),
-              radial-gradient(circle at 85% 70%, rgba(47, 79, 61, 0.06) 0, transparent 40%),
-              var(--paper);
+  background: #fff;
 }
 .numa-metrics-ambient-orb {
   position: absolute;
@@ -2997,6 +2997,24 @@ em {
 }
 
 @media (max-width: 768px) {
+  /* Keep the three About statistics inside the narrow viewport instead of
+     forcing a wider page and squeezing the sticky navbar. */
+  .about-stats-strip {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  /* The desktop scroll track reserves 280vh for the interactive system. On
+     mobile the system is static, so remove that empty track before the app
+     showcase. */
+  .numa-system-section {
+    min-height: auto;
+    padding-bottom: 0;
+  }
+  .numa-app-section {
+    padding-top: 48px;
+  }
   .numa-metrics-grid {
     grid-template-columns: 1fr;
   }
@@ -3017,3 +3035,80 @@ em {
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: .01ms !important; }
 }
+
+/* First content section after every page hero */
+.page-hero + .section {
+  background: #fff !important;
+}
+
+/* About */
+.page-hero + .numa-story-section { color: var(--ink) !important; }
+.page-hero + .numa-story-section h2 { color: var(--green-dark) !important; }
+.page-hero + .numa-story-section h2 em,
+.page-hero + .numa-story-section .section-label,
+.page-hero + .numa-story-section .text-link { color: #a94f3a !important; }
+.page-hero + .numa-story-section .section-label i { background: #a94f3a !important; }
+.page-hero + .numa-story-section p { color: var(--muted) !important; }
+.page-hero + .numa-story-section .about-stats-strip { border-color: var(--line); }
+.page-hero + .numa-story-section .about-stat-item strong { color: var(--green) !important; }
+.page-hero + .numa-story-section .about-stat-item small { color: var(--muted) !important; }
+.page-hero + .numa-story-section .story-card-wrapper {
+  background: #f8efe8 !important;
+  border-color: rgba(47, 79, 61, .14) !important;
+  box-shadow: 0 20px 45px rgba(31, 42, 37, .09) !important;
+}
+
+/* Services */
+.page-hero + .services-section .service-tabs button {
+  background: var(--green) !important;
+  border-color: var(--green) !important;
+  color: #fff !important;
+}
+.page-hero + .services-section .service-tabs button:hover:not(.active) { background: var(--green-dark) !important; }
+.page-hero + .services-section .service-tabs button.active {
+  background: var(--peach) !important;
+  border-color: var(--peach) !important;
+  color: var(--green-dark) !important;
+}
+.page-hero + .services-section .service-tabs button.active small { color: var(--green-dark) !important; }
+.page-hero + .services-section .service-card {
+  background: #f8efe8;
+  border-color: var(--line);
+  box-shadow: 0 18px 42px rgba(31, 42, 37, .1);
+}
+
+/* Process */
+.page-hero + .numa-process-section { color: var(--ink) !important; }
+.page-hero + .numa-process-section .process-header-wrap h2 { color: var(--green-dark); }
+.page-hero + .numa-process-section .process-header-wrap .section-label { color: #a94f3a; }
+.page-hero + .numa-process-section .numa-proc-card {
+  background: #f8efe8;
+  border-color: rgba(47, 79, 61, .14);
+  color: var(--ink);
+  box-shadow: 0 16px 36px rgba(31, 42, 37, .09);
+}
+.page-hero + .numa-process-section .numa-proc-card:hover { background: #f3e4d8; }
+.page-hero + .numa-process-section .numa-proc-phase { color: var(--green); background: rgba(47, 79, 61, .08); }
+.page-hero + .numa-process-section .numa-proc-card h2 { color: var(--green-dark); }
+.page-hero + .numa-process-section .numa-proc-card p { color: var(--muted); }
+.page-hero + .numa-process-section .numa-proc-arrow { border-color: var(--line); color: #a94f3a; }
+
+/* Contact */
+.page-hero + .numa-contact-section { color: var(--ink) !important; }
+.page-hero + .numa-contact-section h2 { color: var(--green-dark) !important; }
+.page-hero + .numa-contact-section h2 em,
+.page-hero + .numa-contact-section .section-label { color: #a94f3a !important; }
+.page-hero + .numa-contact-section .section-label i { background: #a94f3a !important; }
+.page-hero + .numa-contact-section p { color: var(--muted) !important; }
+.page-hero + .numa-contact-section .numa-contact-link {
+  color: var(--green-dark) !important;
+  background: #f8efe8;
+  border-color: rgba(47, 79, 61, .14);
+}
+.page-hero + .numa-contact-section .numa-contact-link:hover { color: #a94f3a !important; border-color: #a94f3a; }
+.page-hero + .numa-contact-section .contact-pill { color: var(--green-dark); background: #f8efe8; border-color: rgba(47, 79, 61, .14); }
+.page-hero + .numa-contact-section .numa-form-card { border-color: var(--line) !important; box-shadow: 0 22px 55px rgba(31, 42, 37, .12); }
+
+/* Portfolio and terms use a true white section canvas as well. */
+.page-hero + .numa-portfolio-section,
+.page-hero + .numa-terms-section { background: #fff !important; }
