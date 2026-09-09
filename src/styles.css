@@ -3117,3 +3117,594 @@ em {
 /* Portfolio and terms use a true white section canvas as well. */
 .page-hero + .numa-portfolio-section,
 .page-hero + .numa-terms-section { background: #fff !important; }
+
+/* ==========================================================================
+   About Page Extended Sections (Adora Solution)
+   ========================================================================== */
+
+.about-section-header {
+  max-width: 680px;
+  margin-bottom: 50px;
+}
+
+.about-section-header h2 {
+  font: 600 clamp(36px, 4.8vw, 62px)/1.02 "Space Grotesk";
+  letter-spacing: -0.065em;
+  margin: 12px 0 16px;
+  color: var(--green-dark);
+}
+
+.about-section-desc {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--muted);
+  max-width: 580px;
+  margin: 0;
+}
+
+/* Our Mission Section */
+.about-mission-section {
+  background: var(--paper);
+  padding: 100px 0;
+}
+
+.about-mission-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  align-items: start;
+}
+
+.about-mission-col.col-1 { padding-top: 25px; }
+.about-mission-col.col-2 { padding-top: 0px; }
+.about-mission-col.col-3 { padding-top: 50px; }
+
+.about-pillar-card {
+  position: relative;
+  background: var(--paper);
+  border: 1px solid rgba(47, 79, 61, 0.12);
+  border-radius: 16px;
+  padding: 34px 28px;
+  box-shadow: 0 16px 40px rgba(31, 42, 37, 0.05), 6px 8px 0 rgba(47, 79, 61, 0.03);
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+}
+
+.about-pillar-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 50px rgba(31, 42, 37, 0.1), 8px 10px 0 rgba(47, 79, 61, 0.06);
+  border-color: rgba(47, 79, 61, 0.25);
+}
+
+.about-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.about-card-num {
+  font: 700 13px "Space Grotesk";
+  color: var(--peach);
+}
+
+.about-card-badge {
+  font: 700 11px "Space Grotesk";
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--green);
+  background: rgba(47, 79, 61, 0.07);
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+
+.about-pillar-subtitle {
+  display: block;
+  font: 700 11px/1.2 "Space Grotesk";
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #a94f3a;
+  margin-bottom: 8px;
+}
+
+.about-pillar-card h3 {
+  font: 600 23px/1.22 "Space Grotesk";
+  letter-spacing: -0.04em;
+  margin: 0 0 14px;
+  color: var(--ink);
+}
+
+.about-pillar-card p {
+  font-size: 14px;
+  line-height: 1.62;
+  color: var(--muted);
+  margin: 0;
+}
+
+.about-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 24px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(47, 79, 61, 0.08);
+  font: 600 11px "Space Grotesk";
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.about-card-indicator {
+  width: 28px;
+  height: 2px;
+  background: var(--green);
+  border-radius: 2px;
+  opacity: 0.7;
+}
+
+/* Our Journey Section */
+.about-journey-section {
+  background: var(--deep);
+  padding: 110px 0;
+}
+
+.about-journey-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: 70px;
+  align-items: center;
+}
+
+.about-journey-lead h2 {
+  font: 600 clamp(36px, 5vw, 60px)/1.02 "Space Grotesk";
+  letter-spacing: -0.065em;
+  margin: 12px 0 20px;
+  color: var(--green-dark);
+}
+
+.about-journey-lead p {
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--muted);
+  margin-bottom: 24px;
+}
+
+.about-journey-quote {
+  border-left: 3px solid var(--peach);
+  padding-left: 20px;
+  margin-top: 30px;
+}
+
+.about-journey-quote p {
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  font-size: 18px;
+  line-height: 1.5;
+  color: var(--green-dark);
+  margin: 0;
+}
+
+.about-journey-cards-col {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.journey-card {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  background: var(--paper);
+  border: 1px solid rgba(47, 79, 61, 0.1);
+  border-radius: 16px;
+  padding: 28px 30px;
+  box-shadow: 0 12px 30px rgba(31, 42, 37, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.journey-card:hover {
+  transform: translateX(6px);
+  box-shadow: 0 18px 40px rgba(31, 42, 37, 0.1);
+}
+
+.journey-card-metric {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 95px;
+  padding: 16px 12px;
+  background: rgba(242, 182, 157, 0.22);
+  border-radius: 12px;
+  text-align: center;
+}
+
+.journey-card-metric span {
+  font: 700 28px/1 "Space Grotesk";
+  color: var(--green-dark);
+  letter-spacing: -0.05em;
+}
+
+.journey-card-metric small {
+  font: 600 10px "Space Grotesk";
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #a94f3a;
+  margin-top: 6px;
+}
+
+.journey-card-content {
+  flex: 1;
+}
+
+.journey-card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 6px;
+}
+
+.journey-num {
+  font: 700 11px "Space Grotesk";
+  color: var(--peach);
+}
+
+.journey-card-header h3 {
+  font: 600 20px/1.2 "Space Grotesk";
+  letter-spacing: -0.04em;
+  margin: 0;
+  color: var(--ink);
+}
+
+.journey-card-content p {
+  font-size: 13.5px;
+  line-height: 1.55;
+  color: var(--muted);
+  margin: 0;
+}
+
+/* 4-Step Process on About Page */
+.about-process-section {
+  background: var(--paper);
+  padding: 110px 0;
+}
+
+.about-process-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.about-process-card {
+  position: relative;
+  background: #fdfaf6;
+  border: 1px solid rgba(47, 79, 61, 0.1);
+  border-radius: 14px;
+  padding: 30px 22px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 10px 26px rgba(31, 42, 37, 0.04);
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-process-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(47, 79, 61, 0.28);
+  box-shadow: 0 18px 36px rgba(31, 42, 37, 0.08);
+}
+
+.about-process-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.about-process-number {
+  font: 700 24px/1 "Space Grotesk";
+  color: var(--green);
+  letter-spacing: -0.05em;
+}
+
+.about-process-phase {
+  font: 700 10px "Space Grotesk";
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #a94f3a;
+  background: rgba(242, 182, 157, 0.2);
+  padding: 3px 8px;
+  border-radius: 999px;
+}
+
+.about-process-card h3 {
+  font: 600 19px/1.25 "Space Grotesk";
+  letter-spacing: -0.03em;
+  margin: 0 0 12px;
+  color: var(--ink);
+}
+
+.about-process-card p {
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: var(--muted);
+  margin: 0 0 20px;
+  flex-grow: 1;
+}
+
+.about-process-bottom {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.about-process-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--peach);
+}
+
+.about-process-line {
+  flex: 1;
+  height: 1px;
+  background: rgba(47, 79, 61, 0.12);
+}
+
+/* Trust Grid 4-columns */
+.about-trust-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr) !important;
+  gap: 24px !important;
+}
+
+.trust-col-1 { padding-top: 20px; }
+.trust-col-2 { padding-top: 0px; }
+.trust-col-3 { padding-top: 35px; }
+.trust-col-4 { padding-top: 15px; }
+
+.trust-card {
+  height: 100%;
+}
+
+/* Industries We've Worked With Section */
+.about-industries-section {
+  background: var(--deep);
+  padding: 110px 0;
+}
+
+.about-industries-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 26px;
+}
+
+.industry-col-1 { padding-top: 20px; }
+.industry-col-2 { padding-top: 0px; }
+.industry-col-3 { padding-top: 30px; }
+.industry-col-4 { padding-top: 10px; }
+
+.industry-card {
+  position: relative;
+  background: var(--paper);
+  border: 1px solid rgba(47, 79, 61, 0.1);
+  border-radius: 16px;
+  padding: 30px 24px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 14px 34px rgba(31, 42, 37, 0.05), 4px 6px 0 rgba(47, 79, 61, 0.03);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.industry-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 22px 46px rgba(31, 42, 37, 0.1), 6px 8px 0 rgba(47, 79, 61, 0.05);
+  border-color: rgba(47, 79, 61, 0.25);
+}
+
+.industry-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.industry-tag {
+  font: 700 10px "Space Grotesk";
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--green);
+  background: rgba(47, 79, 61, 0.08);
+  padding: 3px 9px;
+  border-radius: 999px;
+}
+
+.industry-index {
+  font: 700 12px "Space Grotesk";
+  color: var(--peach);
+}
+
+.industry-card h3 {
+  font: 600 21px/1.22 "Space Grotesk";
+  letter-spacing: -0.04em;
+  margin: 0 0 12px;
+  color: var(--ink);
+}
+
+.industry-card p {
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: var(--muted);
+  margin: 0 0 20px;
+  flex-grow: 1;
+}
+
+.industry-highlight {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-top: 14px;
+  border-top: 1px dashed rgba(47, 79, 61, 0.14);
+}
+
+.industry-check {
+  display: inline-grid;
+  place-items: center;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: rgba(47, 79, 61, 0.12);
+  color: var(--green);
+  font-size: 11px;
+  font-weight: bold;
+}
+
+.industry-highlight small {
+  font: 600 12px "Space Grotesk";
+  color: var(--green-dark);
+}
+
+/* About Closing CTA Section */
+.about-cta-section {
+  padding: 110px 0;
+  text-align: center;
+}
+
+.about-cta-card {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.about-cta-card .section-label {
+  color: var(--peach) !important;
+}
+
+.about-cta-card h2 {
+  font: 600 clamp(40px, 5.5vw, 68px)/0.98 "Space Grotesk";
+  letter-spacing: -0.07em;
+  margin: 16px 0 22px;
+  color: var(--paper);
+}
+
+.about-cta-desc {
+  font-size: 17px;
+  line-height: 1.65;
+  color: #d7dfca;
+  max-width: 620px;
+  margin: 0 auto 36px;
+}
+
+.about-cta-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 36px;
+}
+
+.about-contact-btn {
+  background: rgba(255, 255, 255, 0.12) !important;
+  color: var(--paper) !important;
+  border: 1px solid rgba(255, 255, 255, 0.22) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+}
+
+.about-contact-btn:hover {
+  background: rgba(255, 255, 255, 0.22) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2) !important;
+}
+
+.about-whatsapp-btn:hover {
+  border-color: #25d366 !important;
+  color: #25d366 !important;
+}
+
+.about-cta-footnote {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font: 500 13px "Space Grotesk";
+  color: #d7dfca;
+}
+
+.about-cta-footnote a {
+  color: var(--paper);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.2s ease;
+}
+
+.about-cta-footnote a:hover {
+  color: var(--peach);
+}
+
+.about-cta-footnote .divider {
+  opacity: 0.5;
+}
+
+/* Responsive Overrides for About Extended Sections */
+@media (max-width: 1024px) {
+  .about-mission-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .about-mission-col.col-3 {
+    grid-column: span 2;
+    padding-top: 0;
+  }
+  .about-process-grid,
+  .about-trust-grid,
+  .about-industries-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  .about-journey-layout {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+}
+
+@media (max-width: 640px) {
+  .about-mission-grid,
+  .about-process-grid,
+  .about-trust-grid,
+  .about-industries-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .about-mission-col.col-1,
+  .about-mission-col.col-2,
+  .about-mission-col.col-3,
+  .trust-col-1,
+  .trust-col-2,
+  .trust-col-3,
+  .trust-col-4,
+  .industry-col-1,
+  .industry-col-2,
+  .industry-col-3,
+  .industry-col-4 {
+    padding-top: 0 !important;
+  }
+  .journey-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  .about-cta-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+  .about-cta-actions .button,
+  .about-cta-actions a {
+    width: 100%;
+    justify-content: center;
+  }
+  .about-cta-footnote {
+    flex-direction: column;
+    gap: 6px;
+  }
+  .about-cta-footnote .divider {
+    display: none;
+  }
+}
