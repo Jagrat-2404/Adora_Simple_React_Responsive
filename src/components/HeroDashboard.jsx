@@ -25,7 +25,10 @@ function HeroDashboard() {
       <Parallax speed={6} className="dashboard-parallax">
         <div className="dashboard-card numa-card-elevated">
           <div className="dashboard-top">
-            <span className="numa-tag">ADORA / ENGINE</span>
+            <span className="numa-tag">
+              <img src="/logo-icon.png" alt="" className="numa-tag-icon" />
+              ADORA / ENGINE
+            </span>
             <span className="numa-live-pill"><span className="pulse-dot" /> Live Active</span>
           </div>
           

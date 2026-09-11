@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 324 341" fill="none">
+  <!-- 4 Growth Bars -->
+  <rect x="0" y="220" width="57" height="121" rx="4" fill="#988d6a" />
+  <rect x="88" y="175" width="58" height="166" rx="4" fill="#988d6a" />
+  <rect x="176" y="117" width="60" height="224" rx="4" fill="#988d6a" />
+  <rect x="267" y="58" width="57" height="283" rx="4" fill="#988d6a" />
+  <!-- Ascending Curve with Arrowhead -->
+  <path d="M 0 178 C 80 174, 175 140, 240 70 L 222 55 L 295 10 L 295 85 L 273 68 C 215 130, 110 168, 0 178 Z" fill="#988d6a" />
+</svg>

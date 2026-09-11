@@ -43,8 +43,9 @@ function Navbar() {
   return (
     <header className="header" ref={headerRef}>
       <Container className="nav">
-        <Link className="logo" to="/" onClick={closeMenu}>
-          Adora<span>Solution</span>
+        <Link className="logo" to="/" onClick={closeMenu} aria-label="Adora Solution">
+          <img src="/logo-icon.png" alt="" className="logo-img" />
+          <span>Adora<span>Solution</span></span>
         </Link>
         <button
           className="menu-button"

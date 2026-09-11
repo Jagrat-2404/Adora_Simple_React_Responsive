@@ -86,8 +86,26 @@ textarea {
 }
 
 .logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 11px;
   font: 700 26px/1 "Space Grotesk";
   letter-spacing: -0.08em;
+  color: inherit;
+  text-decoration: none;
+}
+
+.logo-img {
+  height: 38px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+  flex-shrink: 0;
+  transition: transform 0.25s ease;
+}
+
+.logo:hover .logo-img {
+  transform: scale(1.06);
 }
 
 .logo span {
@@ -1408,6 +1426,31 @@ em {
   gap: 40px;
 }
 
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-logo {
+  display: inline-block;
+  text-decoration: none;
+  margin-bottom: 2px;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.footer-logo:hover {
+  opacity: 0.92;
+  transform: translateY(-1px);
+}
+
+.footer-logo-img {
+  height: 60px;
+  width: auto;
+  max-width: 180px;
+  object-fit: contain;
+  display: block;
+}
+
 .footer p {
   max-width: 240px;
   margin: 16px 0 0;
@@ -1502,6 +1545,16 @@ em {
   .logo {
     position: relative;
     z-index: 12;
+    gap: 9px;
+    font-size: 22px;
+  }
+
+  .logo-img {
+    height: 32px;
+  }
+
+  .footer-logo-img {
+    height: 52px;
   }
 
   .menu-button {
@@ -2041,9 +2094,19 @@ em {
 }
 
 .numa-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   font: 700 9px "Space Grotesk";
   letter-spacing: 0.14em;
   color: var(--muted);
+}
+
+.numa-tag-icon {
+  width: 13px;
+  height: 13px;
+  object-fit: contain;
+  display: inline-block;
 }
 
 .numa-live-pill {
