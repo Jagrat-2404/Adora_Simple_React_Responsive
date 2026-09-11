@@ -2,6 +2,7 @@ import { Parallax } from 'react-scroll-parallax'
 import Container from './Container'
 import SectionLabel from './SectionLabel'
 import { aboutProcessSteps } from '../data/siteData'
+
 function AboutProcessSection() {
   return (
     <section className="section about-process-section" aria-labelledby="process-title">
@@ -16,6 +17,7 @@ function AboutProcessSection() {
             A transparent 4-stage framework that eliminates ambiguity and turns marketing spend into predictable customer attention.
           </p>
         </div>
+
         <div className="about-process-grid">
           {aboutProcessSteps.map((step, index) => {
             const speeds = [-4, 2, -3, 3]
@@ -45,4 +47,5 @@ function AboutProcessSection() {
     </section>
   )
 }
+
 export default AboutProcessSection

@@ -6,6 +6,8 @@ import PageHero from '../components/PageHero'
 import ServiceCard from '../components/ServiceCard'
 import Button from '../components/Button'
 import AnimatedCounter from '../components/AnimatedCounter'
+import ServiceDeliverablesSection from '../components/ServiceDeliverablesSection'
+import ServiceWorkflowSection from '../components/ServiceWorkflowSection'
 import { services } from '../data/siteData'
 
 function Services() {
@@ -23,8 +25,8 @@ function Services() {
         badge2="● High CTR Campaigns"
       />
 
-      {/* Main Interactive Service Section with Parallax */}
-      <section className="section services-section numa-services-main">
+      {/* Main Interactive Service Overview with Parallax */}
+      <section className="section services-section numa-services-main" aria-label="Services overview">
         <Container>
           <Parallax speed={-3} className="service-tabs-wrapper">
             <div className="service-tabs" role="tablist">
@@ -49,12 +51,18 @@ function Services() {
         </Container>
       </section>
 
-      {/* Services Parallax Highlights Section */}
-      <section className="section numa-services-deliverables">
+      {/* In-Depth Deliverables & Benefits Comparison */}
+      <ServiceDeliverablesSection />
+
+      {/* 5-Step Execution Workflow */}
+      <ServiceWorkflowSection />
+
+      {/* Services Parallax Highlights & Benchmarks Section */}
+      <section className="section numa-services-deliverables" aria-labelledby="benchmarks-title">
         <Container>
           <div className="numa-serv-intro">
-            <SectionLabel>How we deliver</SectionLabel>
-            <h2>Strategic clarity in<br /><em>every deliverable.</em></h2>
+            <SectionLabel>Proven benchmarks</SectionLabel>
+            <h2 id="benchmarks-title">Strategic clarity in<br /><em>every deliverable.</em></h2>
           </div>
 
           <div className="numa-serv-grid">
@@ -103,17 +111,46 @@ function Services() {
         </Container>
       </section>
 
-      {/* Service Call to Action */}
-      <section className="section">
-        <Container className="service-note numa-service-cta">
-          <Parallax speed={-3}>
-            <SectionLabel>Not sure where to begin?</SectionLabel>
-            <h2>
+      {/* High-Conversion Closing Call to Action */}
+      <section className="section green-section about-cta-section" aria-labelledby="serv-cta-title">
+        <Container>
+          <div className="about-cta-card">
+            <SectionLabel>Not sure which service you need?</SectionLabel>
+            <h2 id="serv-cta-title">
               Let&apos;s find the<br />
               <em>right next step.</em>
             </h2>
-            <Button to="/contact">Start a conversation</Button>
-          </Parallax>
+            <p className="about-cta-desc">
+              Book a quick 15-minute consultation. We will audit your current social media and ads, identify low-hanging fruit, and propose a tailored roadmap.
+            </p>
+            <div className="about-cta-actions">
+              <Button to="/contact" variant="peach">
+                Schedule a Consultation <span>↗</span>
+              </Button>
+              <a
+                className="button about-contact-btn about-whatsapp-btn"
+                href="https://wa.me/919824900460?text=Hi%20Adora%20Solution,%20I%20want%20to%20discuss%20which%20marketing%20service%20is%20right%20for%20my%20business."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span>WhatsApp Us ↗</span>
+              </a>
+              <a
+                className="button about-contact-btn about-call-btn"
+                href="tel:+919824900460"
+              >
+                <span>Call +91 98249 00460 ↗</span>
+              </a>
+            </div>
+            <div className="about-cta-footnote">
+              <span>Direct lines:</span>
+              <a href="tel:+919824900460">+91 98249 00460</a>
+              <span className="divider">|</span>
+              <a href="tel:+919327780465">+91 93277 80465</a>
+              <span className="divider">·</span>
+              <a href="mailto:info@adorasolution.in">info@adorasolution.in</a>
+            </div>
+          </div>
         </Container>
       </section>
     </>

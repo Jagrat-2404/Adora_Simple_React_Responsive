@@ -24,6 +24,7 @@ function AboutJourneySection() {
               </p>
             </div>
           </Parallax>
+
           <div className="about-journey-cards-col">
             {journeyMilestones.map((item, index) => (
               <Parallax
@@ -46,24 +47,6 @@ function AboutJourneySection() {
                 </article>
               </Parallax>
             ))}
-          </div>
-        </div>
-
-        <div className="about-journey-summary">
-          <div className="about-journey-summary-left">
-            <div className="journey-summary-label">
-              <span className="journey-summary-label-line" />
-              Growth system
-            </div>
-            <div className="about-journey-summary-title">
-              <span>From creative production</span>
-              <span>to conversion momentum</span>
-            </div>
-          </div>
-          <div className="about-journey-summary-right">
-            <AnimatedCounter value={24} suffix="+" label="campaign launches" />
-            <AnimatedCounter value={36} suffix="+" label="brand touchpoints" />
-            <AnimatedCounter value={8} suffix="+" label="local sectors" />
           </div>
         </div>
       </Container>
