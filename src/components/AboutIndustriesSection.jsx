@@ -2,8 +2,10 @@ import { Parallax } from 'react-scroll-parallax'
 import Container from './Container'
 import SectionLabel from './SectionLabel'
 import { industriesWorkedWith } from '../data/siteData'
+
 function AboutIndustriesSection() {
   const speeds = [-5, 4, -4, 5]
+
   return (
     <section className="section about-industries-section" aria-labelledby="industries-title">
       <Container>
@@ -17,6 +19,7 @@ function AboutIndustriesSection() {
             Every category has unique customer expectations. We craft customized design systems and ad strategies specifically tuned to your market.
           </p>
         </div>
+
         <div className="about-industries-grid">
           {industriesWorkedWith.map((item, index) => (
             <Parallax
@@ -43,4 +46,5 @@ function AboutIndustriesSection() {
     </section>
   )
 }
+
 export default AboutIndustriesSection

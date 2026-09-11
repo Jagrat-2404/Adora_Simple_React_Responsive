@@ -2,10 +2,11 @@ import { Parallax } from 'react-scroll-parallax'
 import Container from './Container'
 import SectionLabel from './SectionLabel'
 import { missionPillars } from '../data/siteData'
+
 function AboutMissionSection() {
   const speeds = [-6, 3, -7]
-  
-return (
+
+  return (
     <section className="section about-mission-section" aria-labelledby="mission-title">
       <Container>
         <div className="about-section-header">
@@ -18,6 +19,7 @@ return (
             We believe that even the smallest brands can achieve big results with the right combination of consistency, design, and targeted performance.
           </p>
         </div>
+
         <div className="about-mission-grid">
           {missionPillars.map((pillar, index) => (
             <Parallax
@@ -45,4 +47,5 @@ return (
     </section>
   )
 }
+
 export default AboutMissionSection

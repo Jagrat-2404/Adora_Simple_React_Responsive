@@ -11,6 +11,7 @@ import Process from './pages/Process'
 import Portfolio from './pages/Portfolio'
 import Contact from './pages/Contact'
 import Terms from './pages/Terms'
+import WhatsAppBubble from './components/WhatsAppBubble'
 
 function SmoothScroll() {
   const { pathname } = useLocation()
@@ -75,6 +76,7 @@ function App() {
         </Routes>
       </main>
       <Footer />
+      <WhatsAppBubble />
     </BrowserRouter>
   )
 }

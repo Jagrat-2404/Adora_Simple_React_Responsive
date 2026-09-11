@@ -77,6 +77,7 @@ export const journeyMilestones = [
     description: 'Establishing authentic local trust and consistent digital identity for emerging founders and storefronts.',
   },
 ]
+
 export const aboutProcessSteps = [
   {
     number: '01',
@@ -114,7 +115,8 @@ export const trustPillars = [
   {
     number: '02',
     title: 'Results that matter',
-    description: 'We focus on tangible business outcomes: qualified enquiries, local leads, and revenue-generating sales.',    badge: 'ROI Focused',
+    description: 'We focus on tangible business outcomes: qualified enquiries, local leads, and revenue-generating sales.',
+    badge: 'ROI Focused',
   },
   {
     number: '03',
@@ -129,6 +131,7 @@ export const trustPillars = [
     badge: 'Long-term Partner',
   },
 ]
+
 export const industriesWorkedWith = [
   {
     id: 'jewellery',
@@ -161,5 +164,201 @@ export const industriesWorkedWith = [
     description: 'Generating steady walk-ins, appointment bookings, and treatment inquiries through hyper-local geo-targeted promotions.',
     highlight: '40% increase in direct customer bookings',
     icon: 'message',
+  },
+]
+
+export const serviceInclusions = {
+  'social-media': {
+    title: 'Social Media Marketing',
+    subtitle: 'Stay visible. Build trust. Grow consistently.',
+    whyMatters: 'Your customers are on Instagram and Facebook every single day. If your business is not active and visible there, you are losing potential customers to competitors.',
+    benefits: [
+      'Reach more local customers every single day',
+      'Build long-term brand trust with professional creatives',
+      'Keep your brand top-of-mind for repeat business',
+      'Outperform local competitors in your market',
+    ],
+    items: [
+      {
+        number: '01',
+        title: 'Content Strategy & Monthly Planning',
+        description: 'Goal-oriented monthly calendar tailored around your seasonal demand, festivals, and business offers.',
+        tag: 'Strategy',
+      },
+      {
+        number: '02',
+        title: 'Short Videos & Scroll-Stopping Reels',
+        description: 'High-retention reel scripts and edits highlighting your products, behind-the-scenes, and customer stories.',
+        tag: 'Reels & Video',
+      },
+      {
+        number: '03',
+        title: 'Creative Graphic Designs',
+        description: 'Distinctive brand templates, carousel educational decks, offer announcements, and festive greetings.',
+        tag: 'Design',
+      },
+      {
+        number: '04',
+        title: 'Stories & Daily Highlights',
+        description: 'Interactive daily stories, product showcase highlights, and customer testimonial showcases to drive daily visits.',
+        tag: 'Daily Presence',
+      },
+      {
+        number: '05',
+        title: 'Captions & Direct-Response Copy',
+        description: 'Engaging captions written with clear calls-to-action that encourage comments, DMs, and WhatsApp inquiries.',
+        tag: 'Copywriting',
+      },
+      {
+        number: '06',
+        title: 'Performance Tracking & Monthly Review',
+        description: 'Clear, jargon-free reports detailing reach, profile visits, follower growth, and top-performing content.',
+        tag: 'Analytics',
+      },
+    ],
+  },
+  'meta-ads': {
+    title: 'Performance Meta Ads',
+    subtitle: 'Targeted campaigns built to bring real enquiries.',
+    whyMatters: 'Organic reach takes time, but Meta Ads let you put your best offers directly in front of thousands of ready-to-buy customers in your city right now.',
+    benefits: [
+      'Reach thousands of targeted local buyers in your city',
+      'Generate direct WhatsApp and phone call enquiries',
+      'Predictable customer acquisition at controlled cost',
+      'Zero wasted budget with granular audience exclusions',
+    ],
+    items: [
+      {
+        number: '01',
+        title: 'Ad Strategy & Funnel Setup',
+        description: 'Customized campaign blueprints configured for your exact goal: local leads, walk-ins, website orders, or messages.',
+        tag: 'Funnel Architecture',
+      },
+      {
+        number: '02',
+        title: 'Precision Target Audience Selection',
+        description: 'Hyper-local geo-fencing (by radius or pin codes), demographic filters, and competitor interest targeting.',
+        tag: 'Targeting',
+      },
+      {
+        number: '03',
+        title: 'High-Converting Ad Creatives & Copy',
+        description: 'Scroll-stopping visual creatives and headline variations engineered for low cost per click (CPC).',
+        tag: 'Ad Creatives',
+      },
+      {
+        number: '04',
+        title: 'Continuous Campaign Management',
+        description: 'Daily bid adjustments, budget reallocation toward winning creatives, and continuous audience refinement.',
+        tag: 'Optimization',
+      },
+      {
+        number: '05',
+        title: 'Direct WhatsApp Lead Routing',
+        description: 'Funnels designed to land interested local prospects straight into your WhatsApp chat or inbound call log.',
+        tag: 'Lead Capture',
+      },
+      {
+        number: '06',
+        title: 'Transparent Reporting & ROI Tracking',
+        description: 'Simple, honest dashboards showing cost-per-lead, enquiry volume, and return on ad spend (ROAS).',
+        tag: 'ROI Tracking',
+      },
+    ],
+  },
+}
+
+export const serviceWorkflowSteps = [
+  {
+    number: '01',
+    phase: 'Discovery',
+    title: 'Understand Brand & Customers',
+    description: 'We analyze your offerings, customer buying triggers, local competitors, and historical marketing data.',
+  },
+  {
+    number: '02',
+    phase: 'Strategy',
+    title: 'Plan Content & Ad Calendar',
+    description: 'We develop a customized monthly plan with clear objectives, offer angles, creative themes, and budget allocations.',
+  },
+  {
+    number: '03',
+    phase: 'Production',
+    title: 'Produce Scroll-Stopping Assets',
+    description: 'Our design and copy team crafts high-retention video reels, graphic creatives, and persuasive ad hooks.',
+  },
+  {
+    number: '04',
+    phase: 'Activation',
+    title: 'Publish & Launch Campaigns',
+    description: 'We schedule consistent organic content and launch targeted ad funnels with precise local audience parameters.',
+  },
+  {
+    number: '05',
+    phase: 'Optimization',
+    title: 'Track Results & Scale What Works',
+    description: 'We continuously test angles, optimize ad spend, and share transparent monthly reports to scale customer inquiries.',
+  },
+]
+
+export const contactChannels = [
+  {
+    id: 'whatsapp',
+    title: 'WhatsApp Us',
+    subtitle: 'Direct 1-click consultation',
+    value: '+91 98249 00460',
+    link: 'https://wa.me/919824900460?text=Hi%20Adora%20Solution,%20I%20want%20to%20enquire%20about%20Digital%20Marketing.',
+    badge: 'Fastest Reply',
+    icon: 'message',
+    isExternal: true,
+  },
+  {
+    id: 'call',
+    title: 'Call Our Team',
+    subtitle: 'Mon–Sat, 9:30 AM – 7:00 PM IST',
+    value: '+91 98249 00460 | +91 93277 80465',
+    link: 'tel:+919824900460',
+    badge: 'Direct Phone',
+    icon: 'target',
+    isExternal: false,
+  },
+  {
+    id: 'email',
+    title: 'Email Inquiry',
+    subtitle: 'Guaranteed reply in 24 hours',
+    value: 'info@adorasolution.in',
+    link: 'mailto:info@adorasolution.in?subject=Inquiry%20from%20Website',
+    badge: 'Official Mail',
+    icon: 'spark',
+    isExternal: false,
+  },
+  {
+    id: 'location',
+    title: 'Location & Presence',
+    subtitle: 'Serving local & Pan-India brands',
+    value: 'Surat, Gujarat, India',
+    link: '/contact',
+    badge: 'Headquarters',
+    icon: 'target',
+    isExternal: false,
+  },
+]
+
+export const contactFaqs = [
+  {
+    question: 'How quickly can we launch after getting started?',
+    answer: 'We typically complete onboarding, brand research, and initial creative setup within 72 hours so your campaigns and postings go live quickly.',
+  },
+  {
+    question: 'Do you offer customized packages for local businesses?',
+    answer: 'Yes! Every business has different goals. We tailor post volume, ad spend, and design styles specifically to your budget and customer base.',
+  },
+  {
+    question: 'Do I need a large budget to run Meta Ads?',
+    answer: 'Not at all. We specialize in working with startups and local storefronts, structuring efficient campaigns starting with modest daily budgets that deliver real enquiries.',
+  },
+  {
+    question: 'How do I track the results of my marketing?',
+    answer: 'We deliver transparent, easy-to-read monthly reports showing reach, leads, enquiries, and return on ad spend—with zero confusing jargon.',
   },
 ]
