@@ -16,6 +16,7 @@ function Footer() {
             <strong>Explore</strong>
             <Link to="/about">About us</Link>
             <Link to="/services">Services</Link>
+            <Link to="/blog">Blog & Insights</Link>
             <Link to="/process">Our process</Link>
             <Link to="/terms-and-conditions">Terms and conditions</Link>
           </div>

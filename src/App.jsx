@@ -11,6 +11,8 @@ import Process from './pages/Process'
 import Portfolio from './pages/Portfolio'
 import Contact from './pages/Contact'
 import Terms from './pages/Terms'
+import BlogList from './pages/BlogList'
+import BlogPost from './pages/BlogPost'
 import WhatsAppBubble from './components/WhatsAppBubble'
 
 function SmoothScroll() {
@@ -71,6 +73,8 @@ function App() {
           <Route path="/services" element={<Services />} />
           <Route path="/process" element={<Process />} />
           <Route path="/portfolio" element={<Portfolio />} />
+          <Route path="/blog" element={<BlogList />} />
+          <Route path="/blog/:slug" element={<BlogPost />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/terms-and-conditions" element={<Terms />} />
         </Routes>

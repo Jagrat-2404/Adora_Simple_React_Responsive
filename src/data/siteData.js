@@ -1,6 +1,9 @@
 export const navigation = [
-  { label: 'Home', path: '/' }, { label: 'About us', path: '/about' },
-  { label: 'Services', path: '/services' }, { label: 'Contact us', path: '/contact' },
+  { label: 'Home', path: '/' },
+  { label: 'About us', path: '/about' },
+  { label: 'Services', path: '/services' },
+  { label: 'Blog', path: '/blog' },
+  { label: 'Contact us', path: '/contact' },
 ]
 export const services = [
   { number: '01', name: 'Social media marketing', icon: 'spark', title: 'Stay visible. Build trust. Grow consistently.', description: 'We create engaging content strategies that help your brand stay active, consistent, and recognisable online.', points: ['Content strategy and monthly planning', 'Creative social media designs', 'Consistent posting and reporting'] },
