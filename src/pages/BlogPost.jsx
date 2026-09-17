@@ -19,10 +19,16 @@ function BlogPost() {
 
   const blog = blogs.find((b) => b.slug === slug)
 
-  // Determine current, previous, and next articles
+  // Determine current, previous, and next articles (looped across all 12 blogs)
   const currentIndex = blogs.findIndex((b) => b.slug === slug)
-  const prevBlog = currentIndex > 0 ? blogs[currentIndex - 1] : null
-  const nextBlog = currentIndex < blogs.length - 1 ? blogs[currentIndex + 1] : null
+  const prevBlog =
+    currentIndex !== -1 && blogs.length > 1
+      ? blogs[(currentIndex - 1 + blogs.length) % blogs.length]
+      : null
+  const nextBlog =
+    currentIndex !== -1 && blogs.length > 1
+      ? blogs[(currentIndex + 1) % blogs.length]
+      : null
 
   // Related blogs (same category or adjacent)
   const relatedBlogs = blogs
@@ -238,6 +244,45 @@ function BlogPost() {
 
           {/* Article Main Content */}
           <article className="blog-article-content">
+            {/* Mobile Table of Contents (Shown only on small screens) */}
+            <div className="blog-mobile-toc">
+              <details className="mobile-toc-details">
+                <summary className="mobile-toc-summary">
+                  <span className="mobile-toc-label">
+                    <span aria-hidden="true">📑</span>
+                    <span>Article Outline & Sections</span>
+                  </span>
+                  <span className="mobile-toc-chevron" aria-hidden="true">▾</span>
+                </summary>
+                <nav
+                  className="mobile-toc-nav"
+                  aria-label="Mobile Table of Contents"
+                  onClick={(e) => {
+                    if (e.target.tagName === 'A') {
+                      e.target.closest('details')?.removeAttribute('open')
+                    }
+                  }}
+                >
+                  <a href="#quick-answer">⚡ Quick Answer</a>
+                  {sections.map((s, sIdx) => (
+                    <a key={s.id} href={`#${s.id}`}>
+                      0{sIdx + 1}. {s.heading}
+                    </a>
+                  ))}
+                  {checklist && checklist.length > 0 && (
+                    <a href="#action-checklist">✦ Action Checklist</a>
+                  )}
+                  {myths && myths.length > 0 && (
+                    <a href="#myth-vs-fact">⚖️ Myth vs Fact</a>
+                  )}
+                  {faqs && faqs.length > 0 && (
+                    <a href="#faqs">❓ Frequently Asked Questions</a>
+                  )}
+                  <a href="#conclusion">🎯 Strategic Summary</a>
+                </nav>
+              </details>
+            </div>
+
             {/* Quick Answer Callout */}
             <div id="quick-answer" className="blog-quick-answer-card">
               <div className="quick-answer-header">
@@ -373,15 +418,13 @@ function BlogPost() {
               </div>
             </div>
 
-            {/* Prev / Next Post Links */}
+            {/* Prev / Next Post Links (Circular Loop) */}
             <div className="blog-prev-next-nav">
-              {prevBlog ? (
+              {prevBlog && (
                 <Link to={`/blog/${prevBlog.slug}`} className="prev-post-card">
                   <span className="nav-direction">← Previous Guide</span>
                   <strong className="nav-title">{prevBlog.title}</strong>
                 </Link>
-              ) : (
-                <div className="prev-post-card placeholder" />
               )}
 
               {nextBlog && (

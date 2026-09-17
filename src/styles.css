@@ -7704,4 +7704,698 @@ em {
 .blog-not-found-section {
   padding: 120px 0;
   text-align: center;
+}
+
+/* ==========================================================================
+   BLOG MOBILE RESPONSIVENESS & TOUCH ENHANCEMENTS
+   ========================================================================== */
+
+/* Mobile Table of Contents (collapsible outline) */
+.blog-mobile-toc {
+  display: block;
+  margin-bottom: 28px;
+}
+
+@media (min-width: 1024px) {
+  .blog-mobile-toc {
+    display: none;
+  }
+}
+
+.mobile-toc-details {
+  border-radius: 16px;
+  background: var(--cream-card);
+  border: 1px solid var(--line);
+  box-shadow: 0 4px 16px rgba(31, 42, 37, 0.04);
+  overflow: hidden;
+  transition: border-color 0.2s ease;
+}
+
+.mobile-toc-details[open] {
+  border-color: var(--peach);
+}
+
+.mobile-toc-summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 18px;
+  cursor: pointer;
+  user-select: none;
+  font: 700 14px "Space Grotesk";
+  color: var(--green-dark);
+  list-style: none;
+}
+
+.mobile-toc-summary::-webkit-details-marker {
+  display: none;
+}
+
+.mobile-toc-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.mobile-toc-chevron {
+  font-size: 16px;
+  color: var(--peach);
+  transition: transform 0.25s ease;
+}
+
+.mobile-toc-details[open] .mobile-toc-chevron {
+  transform: rotate(180deg);
+}
+
+.mobile-toc-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 10px 14px 16px;
+  border-top: 1px solid var(--line);
+  background: rgba(246, 236, 225, 0.35);
+}
+
+.mobile-toc-nav a {
+  display: block;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 13.5px;
+  color: var(--muted);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.mobile-toc-nav a:hover,
+.mobile-toc-nav a:active {
+  color: var(--green-dark);
+  background: var(--paper);
+  font-weight: 600;
+}
+
+/* Horizontal scroll hint for data tables */
+.table-scroll-hint {
+  display: none;
+  font: 600 11.5px "Space Grotesk";
+  color: var(--muted);
+  text-align: right;
+  margin-bottom: 6px;
+}
+
+/* Anchor link offset for sticky header */
+.blog-quick-answer-card,
+.blog-content-section,
+.blog-section-spacing,
+.blog-myth-fact-section,
+.blog-faqs-section,
+.blog-conclusion-card {
+  scroll-margin-top: 96px;
+}
+
+/* Tablets and Below (< 960px) */
+@media (max-width: 960px) {
+  .blog-hub-section {
+    padding-top: 28px;
+    padding-bottom: 64px;
+  }
+
+  .blog-article-section {
+    padding-top: 36px;
+    padding-bottom: 64px;
+  }
+}
+
+/* Mobile Screens (< 768px) */
+@media (max-width: 768px) {
+  /* Sleek horizontal scrolling filter bar */
+  .blog-controls-wrapper {
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+
+  .blog-category-filter {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    padding: 5px 6px;
+    border-radius: 999px;
+    max-width: 100%;
+    gap: 6px;
+  }
+
+  .blog-category-filter::-webkit-scrollbar {
+    display: none;
+  }
+
+  .blog-filter-btn {
+    white-space: nowrap;
+    flex-shrink: 0;
+    padding: 7px 14px;
+    font-size: 13px;
+    gap: 6px;
+  }
+
+  .filter-count {
+    font-size: 10px;
+    padding: 1px 6px;
+  }
+
+  .blog-search-box {
+    max-width: 100%;
+  }
+
+  .blog-search-input {
+    padding: 11px 36px 11px 40px;
+    font-size: 14px;
+  }
+
+  .search-icon {
+    left: 14px;
+    font-size: 14px;
+  }
+}
+
+/* Smartphone Screens (< 640px) */
+@media (max-width: 640px) {
+  .table-scroll-hint {
+    display: block;
+  }
+
+  /* Single Blog Post Hero */
+  .blog-post-hero {
+    padding: 36px 0 28px;
+  }
+
+  .blog-breadcrumbs {
+    gap: 6px;
+    font-size: 12.5px;
+    margin-bottom: 16px;
+  }
+
+  .blog-hero-meta-strip {
+    gap: 8px;
+    font-size: 12px;
+    margin-bottom: 14px;
+  }
+
+  .blog-hero-category-pill {
+    padding: 4px 10px;
+    font-size: 11px;
+  }
+
+  .blog-post-title {
+    font-size: clamp(24px, 6.5vw, 34px);
+    line-height: 1.25;
+    letter-spacing: -0.025em;
+    margin-bottom: 14px;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+  }
+
+  .blog-post-subtitle {
+    font-size: 15px;
+    line-height: 1.55;
+    margin-bottom: 22px;
+  }
+
+  .blog-hero-author-box {
+    width: 100%;
+    padding: 12px 14px;
+    gap: 12px;
+    border-radius: 14px;
+  }
+
+  .blog-author-avatar.large {
+    width: 42px;
+    height: 42px;
+    font-size: 14px;
+  }
+
+  .blog-author-details strong {
+    font-size: 14px;
+  }
+
+  .blog-author-details span {
+    font-size: 11.5px;
+    line-height: 1.35;
+  }
+
+  /* Quick Answer Callout */
+  .blog-quick-answer-card {
+    padding: 18px 16px;
+    border-radius: 16px;
+    margin-bottom: 28px;
+  }
+
+  .quick-answer-header {
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 10px;
+  }
+
+  .quick-answer-badge {
+    font-size: 11px;
+    padding: 3px 10px;
+  }
+
+  .quick-answer-tag {
+    font-size: 10.5px;
+  }
+
+  .quick-answer-text {
+    font-size: 15.5px;
+    line-height: 1.6;
+  }
+
+  /* Section Headings & Body */
+  .blog-content-section {
+    margin-bottom: 34px;
+  }
+
+  .section-heading {
+    font-size: clamp(20px, 5.5vw, 25px);
+    line-height: 1.3;
+    margin-bottom: 12px;
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+
+  .article-body-text {
+    font-size: 15px;
+    line-height: 1.75;
+    margin-bottom: 16px;
+  }
+
+  /* Infographic Cards */
+  .blog-infographic-card {
+    padding: 18px 14px;
+    border-radius: 16px;
+    margin: 30px 0;
+  }
+
+  .blog-infographic-card h4 {
+    font-size: 18px;
+    line-height: 1.3;
+    margin-bottom: 6px;
+  }
+
+  .infographic-subtitle {
+    font-size: 13px;
+    margin-bottom: 16px;
+  }
+
+  .funnel-stage {
+    padding: 12px 14px;
+    border-radius: 12px;
+  }
+
+  .funnel-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .funnel-label {
+    font-size: 13.5px;
+  }
+
+  .funnel-metric {
+    font-size: 11px;
+    padding: 2px 8px;
+    align-self: flex-start;
+  }
+
+  .funnel-friction,
+  .funnel-success {
+    font-size: 12px;
+    line-height: 1.45;
+  }
+
+  .infographic-table-wrapper {
+    margin: 0 -4px;
+    border-radius: 10px;
+    border: 1px solid var(--line);
+  }
+
+  .infographic-table {
+    min-width: 480px;
+  }
+
+  .infographic-table th,
+  .infographic-table td {
+    padding: 10px 12px;
+    font-size: 12.5px;
+  }
+
+  .pyramid-level {
+    padding: 12px 14px;
+    gap: 12px;
+  }
+
+  .pyramid-num {
+    font-size: 18px;
+  }
+
+  .pyramid-info strong {
+    font-size: 13.5px;
+  }
+
+  .pyramid-info p {
+    font-size: 12.5px;
+  }
+
+  .split-box,
+  .scorecard-item,
+  .bucket-card,
+  .timeline-node {
+    padding: 15px 14px;
+    border-radius: 12px;
+  }
+
+  /* Interactive Action Plan Checklist */
+  .blog-checklist-card {
+    padding: 18px 14px;
+    border-radius: 16px;
+    margin: 30px 0;
+  }
+
+  .blog-checklist-title {
+    font-size: 18px;
+    line-height: 1.3;
+  }
+
+  .blog-checklist-stats {
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .blog-checklist-progress-pill {
+    flex: 1;
+    max-width: 120px;
+  }
+
+  .blog-checklist-item {
+    align-items: flex-start;
+    padding: 12px 12px;
+    gap: 10px;
+  }
+
+  .blog-checkbox-box {
+    margin-top: 2px;
+    width: 20px;
+    height: 20px;
+  }
+
+  .blog-checklist-text {
+    font-size: 13.5px;
+    line-height: 1.5;
+  }
+
+  /* Myth vs Fact Section */
+  .blog-myth-fact-section {
+    margin: 34px 0;
+  }
+
+  .myth-fact-header h3 {
+    font-size: 21px;
+  }
+
+  .myth-block,
+  .fact-block {
+    padding: 15px 14px;
+  }
+
+  .myth-block p,
+  .fact-block p {
+    font-size: 13.5px;
+  }
+
+  /* Professional Support Callout */
+  .blog-support-callout {
+    padding: 22px 16px;
+    border-radius: 16px;
+    margin: 34px 0;
+  }
+
+  .blog-support-callout h4 {
+    font-size: 19px;
+    line-height: 1.3;
+  }
+
+  .blog-support-callout p {
+    font-size: 14px;
+    margin-bottom: 18px;
+  }
+
+  .support-actions {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .support-actions .button {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+
+  /* FAQ Accordion Section */
+  .blog-faqs-section {
+    margin: 34px 0;
+  }
+
+  .faqs-header h3 {
+    font-size: 21px;
+  }
+
+  .blog-faq-question {
+    padding: 13px 14px;
+    gap: 10px;
+    font-size: 14px;
+  }
+
+  .blog-faq-q-indicator {
+    font-size: 10.5px;
+    padding: 2px 6px;
+  }
+
+  .blog-faq-answer-inner {
+    padding: 0 14px 16px 14px;
+  }
+
+  .blog-faq-answer-inner p {
+    font-size: 13.5px;
+    line-height: 1.6;
+  }
+
+  /* Conclusion Summary Card */
+  .blog-conclusion-card {
+    padding: 20px 16px;
+    border-radius: 16px;
+    margin: 34px 0;
+  }
+
+  .blog-conclusion-card h3 {
+    font-size: 19px;
+  }
+
+  .blog-conclusion-card p {
+    font-size: 14px;
+  }
+
+  .conclusion-company-note {
+    font-size: 13px;
+    padding-top: 14px;
+  }
+
+  .conclusion-cta-wrap {
+    margin-top: 14px;
+  }
+
+  .conclusion-cta-wrap .button {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+
+  /* Footer Share Bar */
+  .blog-post-footer-bar {
+    padding: 16px 0;
+    margin-bottom: 28px;
+  }
+
+  .footer-share-group {
+    gap: 8px;
+    font-size: 12.5px;
+  }
+
+  .share-chip {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+
+  /* Prev / Next Navigation Cards (Stacked on Mobile) */
+  .blog-prev-next-nav {
+    gap: 12px;
+    margin-bottom: 36px;
+  }
+
+  .prev-post-card,
+  .next-post-card {
+    padding: 15px 14px;
+    border-radius: 14px;
+    text-align: left;
+  }
+
+  .nav-direction {
+    font-size: 11px;
+  }
+
+  .nav-title {
+    font-size: 14px;
+    line-height: 1.35;
+  }
+
+  /* Related Articles Section */
+  .blog-related-section {
+    padding-top: 36px;
+    padding-bottom: 56px;
+  }
+
+  .related-header {
+    margin-bottom: 18px;
+  }
+
+  .related-header h2 {
+    font-size: 21px;
+  }
+
+  /* Featured Article Card in Blog Hub */
+  .blog-featured-wrap {
+    margin-bottom: 32px;
+  }
+
+  .blog-card-featured {
+    border-radius: 18px;
+  }
+
+  .blog-card-featured .blog-card-visual {
+    min-height: 150px;
+    padding: 16px 14px;
+  }
+
+  .blog-card-featured .blog-card-hero-icon-wrap {
+    width: 60px;
+    height: 60px;
+    border-radius: 18px;
+  }
+
+  .blog-card-featured .blog-card-content {
+    padding: 18px 15px;
+  }
+
+  .blog-featured-title {
+    font-size: 19px;
+    line-height: 1.3;
+    margin-bottom: 8px;
+  }
+
+  .blog-featured-excerpt {
+    font-size: 13.5px;
+    line-height: 1.55;
+    margin-bottom: 16px;
+  }
+
+  /* Regular Blog Cards in Hub */
+  .blog-grid-wrap {
+    margin-bottom: 44px;
+  }
+
+  .blog-grid-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    margin-bottom: 18px;
+  }
+
+  .blog-grid-header h3 {
+    font-size: 19px;
+  }
+
+  .blog-cards-grid {
+    gap: 16px;
+  }
+
+  .blog-card {
+    border-radius: 16px;
+  }
+
+  .blog-card-visual {
+    min-height: 130px;
+    padding: 14px 12px;
+  }
+
+  .blog-card-hero-icon-wrap.mini {
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+    margin: 14px auto;
+  }
+
+  .blog-card-hero-icon-wrap.mini .blog-hero-symbol {
+    font-size: 20px;
+  }
+
+  .blog-card-content {
+    padding: 16px 14px;
+  }
+
+  .blog-card-title {
+    font-size: 16px;
+    line-height: 1.35;
+    margin-bottom: 6px;
+  }
+
+  .blog-card-excerpt {
+    font-size: 13px;
+    margin-bottom: 14px;
+    -webkit-line-clamp: 2;
+  }
+
+  .blog-read-cta {
+    padding: 5px 12px;
+    font-size: 12px;
+  }
+
+  /* Consultation Section in Blog Hub */
+  .blog-consultation-section {
+    padding: 56px 0;
+  }
+
+  .blog-cta-inner h2 {
+    font-size: clamp(22px, 6vw, 30px);
+    margin: 10px 0 14px;
+  }
+
+  .blog-cta-inner p {
+    font-size: 14px;
+    line-height: 1.55;
+    margin-bottom: 22px;
+  }
+
+  .blog-cta-inner .actions {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .blog-cta-inner .actions .button {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
 }

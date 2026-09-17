@@ -35,7 +35,7 @@ function BlogFaqAccordion({ faqs = [] }) {
               <div
                 className={`blog-faq-answer-collapse ${isOpen ? 'expanded' : ''}`}
                 style={{
-                  maxHeight: isOpen ? '300px' : '0px',
+                  maxHeight: isOpen ? '800px' : '0px',
                 }}
               >
                 <div className="blog-faq-answer-inner">

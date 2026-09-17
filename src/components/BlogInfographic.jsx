@@ -56,6 +56,7 @@ function BlogInfographic({ type }) {
             Compare features to identify the right tool for your immediate advertising objective:
           </p>
 
+          <div className="table-scroll-hint">← Swipe to compare →</div>
           <div className="infographic-table-wrapper">
             <table className="infographic-table">
               <thead>
@@ -258,6 +259,7 @@ function BlogInfographic({ type }) {
         <div className="blog-infographic-card">
           <div className="infographic-badge">Format Selection Matrix</div>
           <h4>When to Use Reels, Carousels, or Static Posts</h4>
+          <div className="table-scroll-hint">← Swipe to compare →</div>
           <div className="infographic-table-wrapper">
             <table className="infographic-table">
               <thead>
