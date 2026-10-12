@@ -34,10 +34,14 @@ function GrowthParallax() {
 
   useEffect(() => {
     const observer = new IntersectionObserver(
-      (entries) => entries.forEach((entry) => {
-        if (entry.isIntersecting) setActive(Number(entry.target.dataset.index))
-      }),
-      { rootMargin: '-35% 0px -45% 0px', threshold: 0 },
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActive(Number(entry.target.dataset.index))
+          }
+        })
+      },
+      { rootMargin: '-20% 0px -35% 0px', threshold: 0.15 },
     )
     stepRefs.current.forEach((step) => step && observer.observe(step))
     return () => observer.disconnect()
@@ -51,17 +55,21 @@ function GrowthParallax() {
       </div>
       <div className="growth-story">
         <div className="growth-steps" aria-label="Our approach">
-          {stories.map((story, index) => <article
-            className={active === index ? 'is-active' : ''}
-            data-index={index}
-            key={story.number}
-            ref={(element) => { stepRefs.current[index] = element }}
-          >
-            <span>{story.number}</span>
-            <p>{story.eyebrow}</p>
-            <h3>{story.title}</h3>
-            <div className="growth-step-copy">{story.copy}</div>
-          </article>)}
+          {stories.map((story, index) => (
+            <article
+              className={active === index ? 'is-active' : ''}
+              data-index={index}
+              key={story.number}
+              ref={(element) => { stepRefs.current[index] = element }}
+              onClick={() => setActive(index)}
+              style={{ cursor: 'pointer' }}
+            >
+              <span>{story.number}</span>
+              <p>{story.eyebrow}</p>
+              <h3>{story.title}</h3>
+              <div className="growth-step-copy">{story.copy}</div>
+            </article>
+          ))}
         </div>
         <div className="growth-visual" aria-live="polite">
           <Parallax speed={-8} className="growth-orb growth-orb-one" />

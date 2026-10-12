@@ -101,9 +101,6 @@ function Contact() {
               <a href="tel:+919824900460" className="numa-contact-link">
                 <span className="link-icon">📞</span> +91 98249 00460
               </a>
-              <a href="tel:+919327780465" className="numa-contact-link">
-                <span className="link-icon">📞</span> +91 93277 80465
-              </a>
               <a
                 href="https://wa.me/919824900460?text=Hi%20Adora%20Solution,%20I%20want%20to%20enquire%20about%20Digital%20Marketing."
                 className="numa-contact-link numa-whatsapp-link"
@@ -131,7 +128,7 @@ function Contact() {
           </Parallax>
 
           <Parallax speed={5} className="numa-contact-form-col">
-            <div className="numa-form-card">
+            <div className="contact-form-simple">
               <ContactForm />
             </div>
           </Parallax>

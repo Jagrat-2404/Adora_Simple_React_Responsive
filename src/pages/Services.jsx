@@ -254,10 +254,8 @@ function Services() {
               </a>
             </div>
             <div className="about-cta-footnote">
-              <span>Direct lines:</span>
+              <span>Direct line:</span>
               <a href="tel:+919824900460">+91 98249 00460</a>
-              <span className="divider">|</span>
-              <a href="tel:+919327780465">+91 93277 80465</a>
               <span className="divider">·</span>
               <a href="mailto:info@adorasolution.in">info@adorasolution.in</a>
             </div>

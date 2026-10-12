@@ -656,7 +656,7 @@ export const contactChannels = [
     id: 'call',
     title: 'Call Our Team',
     subtitle: 'Direct phone conversation',
-    value: '+91 98249 00460 | +91 93277 80465',
+    value: '+91 98249 00460',
     link: 'tel:+919824900460',
     badge: 'Direct Call',
     icon: 'target',

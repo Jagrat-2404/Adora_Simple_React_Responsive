@@ -24,7 +24,6 @@ function Footer() {
             <strong>Let's talk</strong>
             <a href="mailto:info@adorasolution.in">info@adorasolution.in</a>
             <a href="tel:+919824900460">+91 98249 00460</a>
-            <a href="tel:+919327780465">+91 93277 80465</a>
           </div>
         </div>
       </Container>
