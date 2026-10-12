@@ -22,6 +22,16 @@ function PageHero({
             <em>{italicTitle}</em>
           </h1>
           <p>{description}</p>
+          <div className="page-hero-mobile-badges" aria-hidden="true">
+            <div className="mobile-badge-pill">
+              <span className="pill-dot">✦</span>
+              <span>{badge1}</span>
+            </div>
+            <div className="mobile-badge-pill">
+              <span className="pill-dot">📈</span>
+              <span>{badge2}</span>
+            </div>
+          </div>
         </Parallax>
 
         <Parallax speed={-9} className="floating-pill-badge page-hero-badge-left">

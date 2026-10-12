@@ -48,12 +48,16 @@ function Navbar() {
           <span>Adora<span>Solution</span></span>
         </Link>
         <button
-          className="menu-button"
+          className={`menu-button ${menuOpen ? 'is-active' : ''}`}
           onClick={() => setMenuOpen(!menuOpen)}
           aria-expanded={menuOpen}
           aria-label="Toggle navigation"
         >
-          {menuOpen ? '×' : '☰'}
+          <span className="hamburger-icon" aria-hidden="true">
+            <span className="hamburger-line line-1" />
+            <span className="hamburger-line line-2" />
+            <span className="hamburger-line line-3" />
+          </span>
         </button>
         <nav className={`nav-links ${menuOpen ? 'open' : ''}`}>
           {navigation.map(item => (

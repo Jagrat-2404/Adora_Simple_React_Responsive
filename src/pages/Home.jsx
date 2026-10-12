@@ -17,28 +17,28 @@ function Home() {
       <section className="hero">
         <Container className="hero-grid">
           <div className="hero-copy">
-            <SectionLabel>Digital marketing for local growth</SectionLabel>
+            <SectionLabel>Digital marketing for startups & local businesses</SectionLabel>
             <h1>
               Grow your startup<br />or local business<br /><em>online.</em>
             </h1>
             <p className="hero-intro">
-              Adora Solution helps ambitious businesses build a magnetic digital presence with high-converting social media marketing, creative design, and Meta Ads.
+              At Adora Solution, we help small businesses build a strong digital presence with social media marketing, creative designing, and Meta Ads. Our strategies are simple, effective, and focused on one thing — helping you get more customers.
             </p>
             <div className="actions">
-              <Button to="/contact">Let&apos;s talk about your growth</Button>
+              <Button to="/contact">Let&apos;s Connect</Button>
               <Link className="text-link" to="/services">
                 Explore our services <span aria-hidden="true">→</span>
               </Link>
             </div>
             <div className="proof">
               <div className="avatars">
-                <b>FS</b>
                 <b>JB</b>
-                <b>UB</b>
+                <b>PS</b>
+                <b>FS</b>
                 <b>+30</b>
               </div>
               <p>
-                Helping <AnimatedCounter value={30} suffix="+" duration={1400} /> local brands accelerate revenue since 2025.
+                Partnered with <AnimatedCounter value={30} suffix="+" duration={1400} /> businesses since 2025 to increase visibility, build trust, and drive sales.
               </p>
             </div>
           </div>
@@ -66,14 +66,14 @@ function Home() {
       {/* Closing Call to Action */}
       <section className="section green-section">
         <Container>
-          <SectionLabel>Ready to grow online?</SectionLabel>
+          <SectionLabel>Ready to take your business online?</SectionLabel>
           <h2>
-            More visibility.<br />
-            <em>More meaningful growth.</em>
+            Let&apos;s create something<br />
+            <em>amazing together.</em>
           </h2>
-          <p>Let&apos;s create a practical, high-converting digital marketing plan for your business.</p>
-          <Button to="/process" variant="peach">
-            How we work
+          <p>Whether you need consistent social media posts, creative designs, or smart Meta Ads, we handle everything so you can focus on running your business.</p>
+          <Button to="/contact" variant="peach">
+            Let&apos;s Connect
           </Button>
         </Container>
       </section>

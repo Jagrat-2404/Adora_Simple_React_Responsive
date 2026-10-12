@@ -16,11 +16,11 @@ function AboutJourneySection() {
               <em>multichannel growth.</em>
             </h2>
             <p>
-              Founded in 2025, Adora Solution started with a passion for helping businesses in Surat build a strong digital presence. Within months, we expanded across multiple industries—helping founders trade guesswork for measurable reach.
+              Founded in 2025, Adora Solution started with a passion for helping businesses in Surat grow digitally. Within months, we expanded our reach to work with brands across different industries — delivering higher visibility on Instagram &amp; Facebook, increased customer enquiries, and strong brand recognition in local markets.
             </p>
             <div className="about-journey-quote">
               <p>
-                &ldquo;We partner with local businesses not just to post graphics, but to build recognizable brands that consistently drive enquiries.&rdquo;
+                &ldquo;We focus on affordable, practical, and result-driven solutions so you can focus on running your business.&rdquo;
               </p>
             </div>
           </Parallax>

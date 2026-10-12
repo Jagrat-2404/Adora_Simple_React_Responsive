@@ -4,39 +4,66 @@ import SectionLabel from './SectionLabel'
 import { industriesWorkedWith } from '../data/siteData'
 
 function AboutIndustriesSection() {
-  const speeds = [-5, 4, -4, 5]
+  const speeds = [-4, 3, -3, 4]
 
   return (
-    <section className="section about-industries-section" aria-labelledby="industries-title">
+    <section className="section about-industries-showcase-section" aria-labelledby="industries-title">
       <Container>
-        <div className="about-section-header">
-          <SectionLabel>Industries we’ve worked with</SectionLabel>
-          <h2 id="industries-title">
-            Deep experience across<br />
-            <em>local business verticals.</em>
-          </h2>
-          <p className="about-section-desc">
-            Every category has unique customer expectations. We craft customized design systems and ad strategies specifically tuned to your market.
+        <div className="about-industries-showcase-header">
+          <div className="industries-header-left">
+            <SectionLabel>Industries we’ve worked with</SectionLabel>
+            <h2 id="industries-title">
+              Proven results across<br />
+              <em>local business verticals.</em>
+            </h2>
+          </div>
+          <p className="industries-header-desc">
+            Since our launch in 2025, we’ve worked with 30+ businesses across industries like Jewellery, Photography, Food & Beverages, and Salons — helping them increase visibility, build trust, and drive sales.
           </p>
         </div>
 
-        <div className="about-industries-grid">
+        <div className="about-industries-showcase-grid">
           {industriesWorkedWith.map((item, index) => (
             <Parallax
               key={item.id}
               speed={speeds[index]}
-              className={`about-industry-col industry-col-${index + 1}`}
+              className={`industry-showcase-col industry-card-${item.id}`}
             >
-              <article className="industry-card">
-                <div className="industry-card-top">
-                  <span className="industry-tag">{item.tag}</span>
-                  <span className="industry-index">0{index + 1}</span>
+              <article className="industry-showcase-card" style={{ '--industry-accent': item.accentColor }}>
+                <div className="industry-card-accent-bar" style={{ backgroundColor: item.accentColor }} />
+                
+                <div className="industry-card-top-row">
+                  <span className="industry-sector-pill" style={{ borderColor: `${item.accentColor}40`, color: item.badgeColor }}>
+                    {item.tag}
+                  </span>
+                  <span className="industry-order-num">0{index + 1}</span>
                 </div>
-                <h3>{item.title}</h3>
-                <p>{item.description}</p>
-                <div className="industry-highlight">
-                  <span className="industry-check">✔</span>
-                  <small>{item.highlight}</small>
+
+                <div className="industry-card-main">
+                  <h3>{item.title}</h3>
+                  <p className="industry-desc">{item.description}</p>
+                </div>
+
+                {/* Real Verified Result from adorasolution.in */}
+                <div className="industry-metric-highlight">
+                  <div className="metric-tag-label">
+                    <span className="metric-icon">📈</span> Verified Result
+                  </div>
+                  <strong className="metric-val-text">{item.resultMetric}</strong>
+                </div>
+
+                {/* Real client quote from adorasolution.in */}
+                <blockquote className="industry-quote-box">
+                  <p>&ldquo;{item.clientQuote}&rdquo;</p>
+                </blockquote>
+
+                {/* Deliverables tags */}
+                <div className="industry-deliverables-list">
+                  {item.deliverables.map((deliv) => (
+                    <span key={deliv} className="industry-deliv-tag">
+                      {deliv}
+                    </span>
+                  ))}
                 </div>
               </article>
             </Parallax>

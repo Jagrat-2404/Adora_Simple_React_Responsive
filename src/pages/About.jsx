@@ -8,9 +8,9 @@ import AnimatedCounter from '../components/AnimatedCounter'
 import AboutMissionSection from '../components/AboutMissionSection'
 import AboutJourneySection from '../components/AboutJourneySection'
 import AboutProcessSection from '../components/AboutProcessSection'
+import AboutTrustSection from '../components/AboutTrustSection'
 import AboutIndustriesSection from '../components/AboutIndustriesSection'
 import TeamSection from '../components/TeamSection'
-import { trustPillars } from '../data/siteData'
 
 function About() {
   return (
@@ -81,41 +81,8 @@ function About() {
       {/* 4-Step Process Section */}
       <AboutProcessSection />
 
-      {/* Values / Why Businesses Trust Us */}
-      <section className="section values-section numa-values-section" aria-labelledby="trust-title">
-        <Container>
-          <div className="values-header">
-            <SectionLabel>Why businesses trust us</SectionLabel>
-            <h2 id="trust-title">Principles that drive<br /><em>consistent results.</em></h2>
-            <p className="about-section-desc">
-              We act as your digital partner, not just a service provider—focusing on the outcomes that directly affect your bottom line.
-            </p>
-          </div>
-
-          <div className="values-grid about-trust-grid">
-            {trustPillars.map((value, index) => {
-              const speeds = [-6, 3, -5, 4]
-              return (
-                <Parallax
-                  key={value.number}
-                  speed={speeds[index % speeds.length]}
-                  className={`numa-val-wrapper trust-col-${index + 1}`}
-                >
-                  <article className="numa-val-card trust-card">
-                    <div className="numa-val-top">
-                      <span className="numa-val-num">{value.number}</span>
-                      <span className="numa-val-dot">● {value.badge}</span>
-                    </div>
-                    <h3>{value.title}</h3>
-                    <p>{value.description}</p>
-                    <div className="numa-val-rule" />
-                  </article>
-                </Parallax>
-              )
-            })}
-          </div>
-        </Container>
-      </section>
+      {/* Why Businesses Trust Us (Dark Emerald Luxury Bento) */}
+      <AboutTrustSection />
 
       {/* Industries We've Worked With */}
       <AboutIndustriesSection />

@@ -25,29 +25,25 @@ function Services() {
         badge2="● High CTR Campaigns"
       />
 
-      {/* Main Interactive Service Overview with Parallax */}
+      {/* Main Interactive Service Overview */}
       <section className="section services-section numa-services-main" aria-label="Services overview">
         <Container>
-          <Parallax speed={-3} className="service-tabs-wrapper">
-            <div className="service-tabs" role="tablist">
-              {services.map((item, index) => (
-                <button
-                  key={item.name}
-                  className={active === index ? 'active' : ''}
-                  onClick={() => setActive(index)}
-                  role="tab"
-                  aria-selected={active === index}
-                >
-                  <small>{item.number}</small>
-                  {item.name}
-                </button>
-              ))}
-            </div>
-          </Parallax>
+          <div className="service-tabs" role="tablist">
+            {services.map((item, index) => (
+              <button
+                key={item.name}
+                className={active === index ? 'active' : ''}
+                onClick={() => setActive(index)}
+                role="tab"
+                aria-selected={active === index}
+              >
+                <small>{item.number}</small>
+                {item.name}
+              </button>
+            ))}
+          </div>
 
-          <Parallax speed={4} className="service-card-parallax-wrap">
-            <ServiceCard service={service} />
-          </Parallax>
+          <ServiceCard service={service} />
         </Container>
       </section>
 
@@ -57,56 +53,171 @@ function Services() {
       {/* 5-Step Execution Workflow */}
       <ServiceWorkflowSection />
 
-      {/* Services Parallax Highlights & Benchmarks Section */}
+      {/* Services Proven Benchmarks & Analytics Scorecard Hub */}
       <section className="section numa-services-deliverables" aria-labelledby="benchmarks-title">
         <Container>
-          <div className="numa-serv-intro">
-            <SectionLabel>Proven benchmarks</SectionLabel>
-            <h2 id="benchmarks-title">Strategic clarity in<br /><em>every deliverable.</em></h2>
-          </div>
+          <div className="benchmarks-bento-layout">
+            {/* Left Column: Executive Summary & Delivery Guarantees */}
+            <div className="benchmarks-summary-col">
+              <div className="benchmarks-badge-pill">
+                <span className="badge-pulse-dot" />
+                <span>Verified Client Metrics</span>
+              </div>
+              <SectionLabel>Proven benchmarks</SectionLabel>
+              <h2 id="benchmarks-title">
+                Measurable momentum in<br />
+                <em>every campaign.</em>
+              </h2>
+              <p className="benchmarks-summary-desc">
+                We do not report vanity impressions or hide behind complicated marketing jargon. Every reel, ad creative, and web platform is engineered to deliver concrete client momentum.
+              </p>
 
-          <div className="numa-serv-grid">
-            <Parallax speed={-8} className="numa-serv-col">
-              <div className="numa-serv-deliverable-card">
-                <span className="numa-serv-badge">● Strategy First</span>
-                <h3>Targeted Audience Blueprints</h3>
-                <p>We analyze customer data, competitor angles, and local buying behaviors before launching a single ad.</p>
-                <div className="numa-serv-stat">
-                  <strong>
+              {/* Delivery Guarantees Checklist */}
+              <div className="benchmarks-commitments-card">
+                <h4>Adora Delivery Commitments</h4>
+                <div className="commitment-items-list">
+                  <div className="commitment-item">
+                    <span className="commitment-icon">✓</span>
+                    <div>
+                      <strong>100% Dedicated Ad Accounts</strong>
+                      <p>You own all your ad pixels, creative assets, and lead lists forever.</p>
+                    </div>
+                  </div>
+                  <div className="commitment-item">
+                    <span className="commitment-icon">✓</span>
+                    <div>
+                      <strong>Direct WhatsApp Routing</strong>
+                      <p>Campaign leads land directly on your team&apos;s WhatsApp within seconds.</p>
+                    </div>
+                  </div>
+                  <div className="commitment-item">
+                    <span className="commitment-icon">✓</span>
+                    <div>
+                      <strong>Zero Vanishing Metrics</strong>
+                      <p>Strict focus on qualified customer inquiries, bookings, and walk-ins.</p>
+                    </div>
+                  </div>
+                  <div className="commitment-item">
+                    <span className="commitment-icon">✓</span>
+                    <div>
+                      <strong>&lt; 72h Rapid Campaign SLA</strong>
+                      <p>Fast creative iterations and prompt weekly transparent performance reviews.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Right Column: 2x2 Bento Performance Dossier Tiles */}
+            <div className="benchmarks-tiles-col">
+              {/* Tile 1: Audience Strategy */}
+              <article className="benchmark-dossier-card">
+                <div className="dossier-card-header">
+                  <div className="dossier-tag">
+                    <span className="dossier-tag-dot" />
+                    <span>Audience Precision</span>
+                  </div>
+                  <span className="dossier-metric-type">Pincode Targeting</span>
+                </div>
+                <div className="dossier-counter-row">
+                  <strong className="dossier-stat-num">
                     <AnimatedCounter value="99.4%" duration={1400} />
                   </strong>
-                  <span>Audience Precision</span>
+                  <span className="dossier-stat-label">Audience Precision Match</span>
                 </div>
-              </div>
-            </Parallax>
+                <h3>Targeted Audience Blueprints</h3>
+                <p>Pinpoint demographic and buyer intent mapping across specific cities before ad spend begins.</p>
+                <div className="dossier-gauge-track">
+                  <div className="dossier-gauge-fill" style={{ width: '99%' }} />
+                </div>
+                <div className="dossier-comparison-bar">
+                  <span className="comparison-pill">Industry Avg: 68%</span>
+                  <span className="comparison-arrow">→</span>
+                  <span className="comparison-adora">Adora: 99.4%</span>
+                </div>
+              </article>
 
-            <Parallax speed={6} className="numa-serv-col">
-              <div className="numa-serv-deliverable-card">
-                <span className="numa-serv-badge">● High Conversion</span>
-                <h3>Custom Creative Assets</h3>
-                <p>Engaging video reels, carousel decks, and tailored copy created specifically for high scroll-stop rates.</p>
-                <div className="numa-serv-stat">
-                  <strong>
+              {/* Tile 2: Creative & Reels */}
+              <article className="benchmark-dossier-card">
+                <div className="dossier-card-header">
+                  <div className="dossier-tag">
+                    <span className="dossier-tag-dot" />
+                    <span>Engagement Velocity</span>
+                  </div>
+                  <span className="dossier-metric-type">Organic + Paid</span>
+                </div>
+                <div className="dossier-counter-row">
+                  <strong className="dossier-stat-num">
                     <AnimatedCounter value="3.4x" duration={1400} />
                   </strong>
-                  <span>Average CTR Benchmark</span>
+                  <span className="dossier-stat-label">Average CTR Velocity</span>
                 </div>
-              </div>
-            </Parallax>
+                <h3>Scroll-Stopping Creative Assets</h3>
+                <p>Short-form video reels, festival decks, and persuasive copy crafted for maximum hook retention.</p>
+                <div className="dossier-gauge-track">
+                  <div className="dossier-gauge-fill" style={{ width: '85%' }} />
+                </div>
+                <div className="dossier-comparison-bar">
+                  <span className="comparison-pill">Industry Avg: 1.1x</span>
+                  <span className="comparison-arrow">→</span>
+                  <span className="comparison-adora">Adora: 3.4x CTR</span>
+                </div>
+              </article>
 
-            <Parallax speed={-11} className="numa-serv-col">
-              <div className="numa-serv-deliverable-card">
-                <span className="numa-serv-badge">● Performance</span>
-                <h3>Meta Ads Lead Funnels</h3>
-                <p>Automated lead generation pipelines continuously monitored and fine-tuned for lowest cost-per-lead.</p>
-                <div className="numa-serv-stat">
-                  <strong>
+              {/* Tile 3: Meta Ads ROAS */}
+              <article className="benchmark-dossier-card">
+                <div className="dossier-card-header">
+                  <div className="dossier-tag">
+                    <span className="dossier-tag-dot" />
+                    <span>Revenue Momentum</span>
+                  </div>
+                  <span className="dossier-metric-type">Lead Generation</span>
+                </div>
+                <div className="dossier-counter-row">
+                  <strong className="dossier-stat-num">
                     <AnimatedCounter value="3.8x" duration={1400} suffix="+" />
                   </strong>
-                  <span>Client ROAS Average</span>
+                  <span className="dossier-stat-label">Client Return on Ad Spend</span>
                 </div>
-              </div>
-            </Parallax>
+                <h3>Meta Ads Lead Funnels</h3>
+                <p>Automated conversion funnels continuously fine-tuned to drive the lowest cost per inquiry.</p>
+                <div className="dossier-gauge-track">
+                  <div className="dossier-gauge-fill" style={{ width: '92%' }} />
+                </div>
+                <div className="dossier-comparison-bar">
+                  <span className="comparison-pill">Target ROAS: &gt; 3.0x</span>
+                  <span className="comparison-arrow">→</span>
+                  <span className="comparison-adora">Adora Avg: 3.8x+</span>
+                </div>
+              </article>
+
+              {/* Tile 4: Modern Web Platforms */}
+              <article className="benchmark-dossier-card">
+                <div className="dossier-card-header">
+                  <div className="dossier-tag">
+                    <span className="dossier-tag-dot" />
+                    <span>Modern Web Speed</span>
+                  </div>
+                  <span className="dossier-metric-type">Vitals &amp; SEO</span>
+                </div>
+                <div className="dossier-counter-row">
+                  <strong className="dossier-stat-num">
+                    <AnimatedCounter value="98.5%" duration={1400} />
+                  </strong>
+                  <span className="dossier-stat-label">Google Core Web Vitals</span>
+                </div>
+                <h3>High-Speed Web Platforms</h3>
+                <p>Mobile-first websites built with ultra-clean code, WhatsApp routing, and full search engine readiness.</p>
+                <div className="dossier-gauge-track">
+                  <div className="dossier-gauge-fill" style={{ width: '98%' }} />
+                </div>
+                <div className="dossier-comparison-bar">
+                  <span className="comparison-pill">Load Time: &lt; 1.2s</span>
+                  <span className="comparison-arrow">→</span>
+                  <span className="comparison-adora">Score: 98.5%</span>
+                </div>
+              </article>
+            </div>
           </div>
         </Container>
       </section>

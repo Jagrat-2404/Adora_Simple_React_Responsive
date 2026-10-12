@@ -29,7 +29,7 @@ function ServiceDeliverablesSection() {
               className={`service-deliv-tab ${selectedKey === 'social-media' ? 'is-active' : ''}`}
               onClick={() => setSelectedKey('social-media')}
             >
-              <span>01</span> Social Media Marketing
+              <span>01</span> Social Media
             </button>
             <button
               type="button"
@@ -38,7 +38,25 @@ function ServiceDeliverablesSection() {
               className={`service-deliv-tab ${selectedKey === 'meta-ads' ? 'is-active' : ''}`}
               onClick={() => setSelectedKey('meta-ads')}
             >
-              <span>02</span> Performance Meta Ads
+              <span>02</span> Meta Ads
+            </button>
+            <button
+              type="button"
+              role="tab"
+              aria-selected={selectedKey === 'graphic-design'}
+              className={`service-deliv-tab ${selectedKey === 'graphic-design' ? 'is-active' : ''}`}
+              onClick={() => setSelectedKey('graphic-design')}
+            >
+              <span>03</span> Graphic Design
+            </button>
+            <button
+              type="button"
+              role="tab"
+              aria-selected={selectedKey === 'website-development'}
+              className={`service-deliv-tab ${selectedKey === 'website-development' ? 'is-active' : ''}`}
+              onClick={() => setSelectedKey('website-development')}
+            >
+              <span>04</span> Web Development
             </button>
           </div>
         </div>
