@@ -1,6 +1,7 @@
 import { Parallax } from 'react-scroll-parallax'
 import Container from './Container'
 import SectionLabel from './SectionLabel'
+import Icon from './Icon'
 import { trustPillars } from '../data/siteData'
 
 function AboutTrustSection() {
@@ -43,6 +44,7 @@ function AboutTrustSection() {
                   rel="noopener noreferrer"
                   className="trust-action-btn"
                 >
+                  <Icon name="whatsapp" size={18} />
                   <span>Chat on WhatsApp</span>
                   <span className="trust-btn-arrow" aria-hidden="true">↗</span>
                 </a>

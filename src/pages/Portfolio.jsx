@@ -107,7 +107,8 @@ function Portfolio() {
                 rel="noopener noreferrer"
                 className="button peach-button"
               >
-                WhatsApp Us ↗
+                <Icon name="whatsapp" size={18} />
+                <span>WhatsApp Us ↗</span>
               </a>
               <a href="tel:+919824900460" className="button text-button">
                 Call Now ↗

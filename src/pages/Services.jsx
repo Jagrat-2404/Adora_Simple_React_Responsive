@@ -8,6 +8,7 @@ import Button from '../components/Button'
 import AnimatedCounter from '../components/AnimatedCounter'
 import ServiceDeliverablesSection from '../components/ServiceDeliverablesSection'
 import ServiceWorkflowSection from '../components/ServiceWorkflowSection'
+import Icon from '../components/Icon'
 import { services } from '../data/siteData'
 
 function Services() {
@@ -244,6 +245,7 @@ function Services() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
+                <Icon name="whatsapp" size={18} />
                 <span>WhatsApp Us ↗</span>
               </a>
               <a

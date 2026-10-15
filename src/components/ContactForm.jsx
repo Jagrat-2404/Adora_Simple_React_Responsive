@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import Icon from './Icon'
 
 function ContactForm() {
   const [sent, setSent] = useState(false)
@@ -84,6 +85,7 @@ function ContactForm() {
               target="_blank"
               rel="noopener noreferrer"
             >
+              <Icon name="whatsapp" size={18} />
               <span>Chat on WhatsApp Now ↗</span>
             </a>
             <button

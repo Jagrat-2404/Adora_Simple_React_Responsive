@@ -11,6 +11,7 @@ import AboutProcessSection from '../components/AboutProcessSection'
 import AboutTrustSection from '../components/AboutTrustSection'
 import AboutIndustriesSection from '../components/AboutIndustriesSection'
 import TeamSection from '../components/TeamSection'
+import Icon from '../components/Icon'
 
 function About() {
   return (
@@ -87,8 +88,8 @@ function About() {
       {/* Industries We've Worked With */}
       <AboutIndustriesSection />
 
-      {/* Team Showcase */}
-      <TeamSection />
+      {/* Team Showcase
+      <TeamSection /> */}
 
       {/* Closing Call to Action */}
       <section className="section green-section about-cta-section" aria-labelledby="about-cta-title">
@@ -112,6 +113,7 @@ function About() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
+                <Icon name="whatsapp" size={18} />
                 <span>WhatsApp Us ↗</span>
               </a>
               <a

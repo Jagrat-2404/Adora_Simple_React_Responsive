@@ -4,6 +4,7 @@ import { Parallax } from 'react-scroll-parallax'
 import Container from '../components/Container'
 import SectionLabel from '../components/SectionLabel'
 import Button from '../components/Button'
+import Icon from '../components/Icon'
 import BlogReadingProgress from '../components/BlogReadingProgress'
 import BlogInteractiveChecklist from '../components/BlogInteractiveChecklist'
 import BlogFaqAccordion from '../components/BlogFaqAccordion'
@@ -216,7 +217,7 @@ function BlogPost() {
                     title="Share on WhatsApp"
                     aria-label="Share on WhatsApp"
                   >
-                    💬
+                    <Icon name="whatsapp" size={18} />
                   </a>
                   <a
                     href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(window.location.href)}`}
@@ -360,7 +361,8 @@ function BlogPost() {
                     rel="noreferrer"
                     className="button outline"
                   >
-                    Quick WhatsApp Chat <span>💬</span>
+                    <Icon name="whatsapp" size={18} />
+                    <span>Quick WhatsApp Chat ↗</span>
                   </a>
                 </div>
               </div>

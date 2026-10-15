@@ -4,6 +4,7 @@ import Container from '../components/Container'
 import PageHero from '../components/PageHero'
 import ContactForm from '../components/ContactForm'
 import SectionLabel from '../components/SectionLabel'
+import Icon from '../components/Icon'
 import { contactChannels, contactFaqs } from '../data/siteData'
 
 function Contact() {
@@ -107,7 +108,10 @@ function Contact() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <span className="link-icon">💬</span> Chat on WhatsApp (Fastest)
+                <span className="link-icon whatsapp-link-icon">
+                  <Icon name="whatsapp" size={18} />
+                </span>
+                <span>Chat on WhatsApp (Fastest)</span>
               </a>
             </div>
 

@@ -6,6 +6,7 @@ import PageHero from '../components/PageHero'
 import BlogCard from '../components/BlogCard'
 import SectionLabel from '../components/SectionLabel'
 import Button from '../components/Button'
+import Icon from '../components/Icon'
 import { blogs, blogCategories } from '../data/blogsData'
 
 function BlogList() {
@@ -178,7 +179,8 @@ function BlogList() {
                 rel="noreferrer"
                 className="button outline"
               >
-                Chat on WhatsApp <span>💬</span>
+                <Icon name="whatsapp" size={18} />
+                <span>Chat on WhatsApp ↗</span>
               </a>
             </div>
           </Parallax>

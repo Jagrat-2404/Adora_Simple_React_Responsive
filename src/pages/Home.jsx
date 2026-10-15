@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import Container from '../components/Container'
 import SectionLabel from '../components/SectionLabel'
 import Button from '../components/Button'
+import Icon from '../components/Icon'
 import HeroDashboard from '../components/HeroDashboard'
 import GrowthParallax from '../components/GrowthParallax'
 import ParallaxMetrics from '../components/ParallaxMetrics'
@@ -72,9 +73,20 @@ function Home() {
             <em>amazing together.</em>
           </h2>
           <p>Whether you need consistent social media posts, creative designs, or smart Meta Ads, we handle everything so you can focus on running your business.</p>
-          <Button to="/contact" variant="peach">
-            Let&apos;s Connect
-          </Button>
+          <div className="home-cta-actions" style={{ display: 'flex', gap: '16px', flexWrap: 'wrap', alignItems: 'center', marginTop: '24px' }}>
+            <Button to="/contact" variant="peach">
+              Let&apos;s Connect
+            </Button>
+            <a
+              className="button about-contact-btn about-whatsapp-btn"
+              href="https://wa.me/919824900460?text=Hi%20Adora%20Solution,%20I%20want%20to%20enquire%20about%20Digital%20Marketing."
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Icon name="whatsapp" size={18} />
+              <span>WhatsApp Us ↗</span>
+            </a>
+          </div>
         </Container>
       </section>
     </>

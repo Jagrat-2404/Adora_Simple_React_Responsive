@@ -512,8 +512,8 @@ function ServiceCard({ service }) {
                 target="_blank"
                 rel="noopener noreferrer"
               >
+                <Icon name="whatsapp" size={18} />
                 <span>WhatsApp</span>
-                <span className="btn-chat-icon" aria-hidden="true">💬</span>
               </a>
             </div>
           </div>

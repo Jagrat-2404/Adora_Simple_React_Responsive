@@ -1,3 +1,5 @@
+import whatsappImg from '../assets/whatsapp.png'
+
 const paths = {
   arrow: <path d="M5 12h13m-5-5 5 5-5 5" />, check: <path d="m5 12 4.2 4L19 6.5" />,
   spark: <path d="M12 3.5 13.8 10 20.5 12l-6.7 1.8L12 20.5l-1.8-6.7L3.5 12l6.7-2L12 3.5Z" />,
@@ -10,5 +12,46 @@ const paths = {
   zap: <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />,
   shield: <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />,
 }
-function Icon({ name, size = 18, className = '' }) { return <svg className={`icon ${className}`} width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">{paths[name] || paths.spark}</svg> }
+
+function Icon({ name, size = 18, className = '' }) {
+  if (name === 'whatsapp') {
+    return (
+      <img
+        src={whatsappImg}
+        alt="WhatsApp"
+        className={`icon icon-whatsapp ${className}`}
+        width={size}
+        height={size}
+        style={{
+          width: `${size}px`,
+          height: `${size}px`,
+          objectFit: 'contain',
+          display: 'inline-block',
+          verticalAlign: 'middle',
+          borderRadius: '50%',
+          flexShrink: 0
+        }}
+        aria-hidden="true"
+      />
+    )
+  }
+
+  return (
+    <svg
+      className={`icon ${className}`}
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.8"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+    >
+      {paths[name] || paths.spark}
+    </svg>
+  )
+}
+
 export default Icon
